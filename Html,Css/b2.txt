@@ -1,0 +1,163 @@
+28tech—Bài 2: Học HTML, HTML5 (Tiết 2)
+🛎️Thẻ <a> (Chèn link)
+- Thẻ <a></a> (anchor-mỏ neo) là thẻ để khi click vào thẻ đó sẽ chuyển hướng đến trang khác
+- Cú pháp: <a href="url">Text</a>
+- Thuộc tính:
+    + href (Hypertext Reference-tài liệu tham khảo dạng siêu văn bản): thuộc tính xác định địa chỉ liên kết
+    + target: thuộc tính xác định nơi mà tài liệu được mở
+        _self: Mặc định. Mở tài liệu ở tab hiện tại
+        _blank: Mở tài liệu trong tab mới
+    + title: Thông tin bổ sung và một element
+🛎️Thẻ <img> (Chèn ảnh)
+- Thẻ <img /> là thẻ để nhúng ảnh vào trang web, thẻ img là thẻ trống, chỉ chứa các thuộc tính và không có thẻ đóng
+- Cú pháp: <img src="duong-dan-hinh-anh.jpg" alt="Mô tả hình ảnh">
+- Thuộc tính:
+    + src (source-nguồn): Chèn đường dẫn ảnh
+    + alt (alternate-thay thế): Văn bản thay thế cho hình ảnh, hiển thị khi đường dẫn ảnh bị lỗi
+🛎️File Paths (Đường dẫn)
+- Absolute File Paths (Đường dẫn tệp tuyệt đối): Đường dẫn tệp tuyệt đối là URL đầy đủ của tệp <img src="https://...">
+- Relative File Paths (Đường dẫn tệp tương đối): Đường dẫn tệp tương đối trỏ đến một tệp liên quan đến trang hiện tại
+    + <img src="logo.png">: File "logo.png" nằm cùng thư mục với trang hiện tại
+    + <img src="images/logo.png">: File "picture.jpg" nằm trong thư mục images trong thư mục hiện tại
+    + <img src="/images/logo.png">: File "picture.jpg" nằm trong thư mục images ở thư mục gốc của trang web hiện tại
+    + <img src="../logo.png">: File "picture.jpg" nằm trong thư mục tăng một cấp so với thư mục hiện tại
+🛎️Thẻ <video> (Chèn video)
+- Thẻ <video></video> là thẻ để nhúng video vào trang web. Trong thẻ video có thẻ <source> để chứa đường dẫn file video và kiểu video
+- Cú pháp:
+    <video width="320" height="240" controls>
+        <source src="link-video.mp4" type="video/mp4">
+    </video>
+- Thuộc tính:
+    + width/height: Chiều rộng và chiều cao của video. Nếu không để width/height thì web có thể bị nhấp nháy trong khi tải video
+    + controls: Thuộc tính điều khiển, như là bật, tạm dừng, âm lượng
+    + loop: Lặp lại video
+    + src: Đường dẫn video
+    + type: Kiểu video (mp4, ogg, webm)
+    + autoplay: Tự động phát video
+    + muted: Tắt tiếng
+- Lưu ý:
+    + Đoạn văn bản ở trong thẻ video sẽ chỉ hiển thị khi trình duyệt không hỗ trợ thẻ video
+    + Trên trình duyệt Chrome không cho phép tự động phát video. Nếu muốn tự động phát được video thì phải thêm thuộc tính muted
+🛎️Thẻ <audio> (Chèn audio)
+- Thẻ <audio></audio> là thẻ dùng để nhúng audio vào trang web. Trong thẻ audio có thẻ <source> để chứa đường dẫn file audio và kiểu audio
+- Cú pháp:
+    <audio controls>
+        <source src="link-audio.mp3" type="audio/mpeg">
+    </audio>
+- Thuộc tính:
+    + controls: Thuộc tính điều khiển, như là bật, tạm dừng, âm lượng
+    + loop: Lặp lại audio
+    + src: Đường dẫn audio
+    + type: Kiểu video (Ví dụ: mpeg-là mp3, ogg, webm, wav)
+🛎️Thẻ <table> (Chèn bảng)
+- Thẻ <table></table> dùng để tạo bảng trong HTML
+- Ví dụ:
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ Tên</th>
+                <th>Số điện thoại</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Le Van A</td>
+                <td>012345678</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nguyen Thi Huyen</td>
+                <td>0966556026</td>
+            </tr>
+        </tbody>
+    </table>
+- Ý nghĩa các thẻ:
+    + <table></table>: Xác định một bảng
+    + <thead></thead>: Phần đầu của bảng
+    + <tbody></tbody>: Phần thân của bảng
+    + <tr></tr> (table row): Xác định một hàng của bảng 
+    + <th></th> (table header): Xác định tiêu đề của bảng 
+    + <td></td> (table data): Xác định dữ liệu ô của bảng
+- Thuộc tính:
+    + colspan: tạo ô mở rộng trên nhiều cột
+    + rowspan: tạo ô kéo dài trên nhiều hàng
+🛎️Thẻ <ul>, <ol> (Chèn danh sách)
+* Kiểu ul:
+- Kiểu <ul></ul> (Unordered List-Không sắp xếp): Các mục con của nó sẽ không được đánh số, mà chỉ được đánh dấu hình tròn
+- Cú pháp:
+    <ul>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+    </ul>
+- Ý nghĩa các thẻ:
+    + <ul></ul> (Unordered List): Danh sách hiển thị kiểu không được đánh Số
+    + <li></li> (List Item): Một mục trong danh sách
+* Kiểu ol:
+- Kiểu <ol></ol> (Ordered List-Sắp xếp): Các mục con của nó được sắp xếp theo thứ tự bằng số hoặc bằng chữ cái
+- Cú pháp:
+    <ol>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+    </ol>
+- Ý nghĩa các thẻ:
+    + <ol></ol> (Ordered List): Danh sách hiển thị kiểu được đánh Số hoặc chữ cái
+    + <li></li> (List Item): Một mục trong danh sách
+- Thuộc tính dành riêng cho thẻ <ol></ol>:
+    + type="1": Mặc định. Các mục trong danh sách sẽ được đánh dưới dạng số
+    + type="A": Các mục trong danh sách sẽ được đánh dưới dạng chữ hoa
+    + type="a": Các mục trong danh sách sẽ được đánh dưới dạng chữ thường
+    + type="I": Các mục trong danh sách sẽ được đánh dưới dạng số La Mã viết hoa 
+    + type="i": Các mục trong danh sách sẽ được đánh dưới dạng số La Mã viết thường
+🛎️Phân biệt kiểu hiển thị của element: block và inline
+* Kiểu block (khối)
+- Luôn luôn bắt đầu trên một dòng mới, và trình duyệt sẽ tự động thêm khoảng trống trước và sau element
+- Luôn luôn chiếm toàn bộ chiều rộng có sẵn
+- Một số thẻ dạng block: <address>, <article>, <aside>, <blockquoote>, <canvas>, <dd>, <div>, 
+<dl>, <dt>, <fieldset>, <figcaption>, <figure>, <footer>, <form>, <h1>-<h6>, <header>, <hr>,
+<li>, <main>, <nav>, <noscript>, <ol>, <p>, <pre>, <section>, <table>, <tfoot>, <ul>
+* Kiểu inline (nội tuyến-trong hàng)
+- Không bắt đầu trên một dòng mới, chiều rộng bằng với chiều rộng element đó
+- Một số thẻ dạng inline:  <a>, <abbr>, <acronym>, <b>, <bdo>, <big>, <br>, <button>, <cite>, <code>, <em>, 
+<i>, <img>, <input>, <kbd>, <label>, <map>, <object>, <output>, <q>, <samp>, <script>, <select>, <small>, <span>, 
+<strong>, <sub>, <sup>, <textarea>, <time>, <tt>, <var>
+* Lưu ý:
+- Khi sử dụng cần nhớ quy tắc đảm bảo mô hình nội dung của HTML:
+    + Phần tử cấp độ inline không được chứa phần tử cấp độ block
+    + Inline chỉ chứa dữ liệu hoặc các phần tử inline khác
+    + Phần tử block thì được chứa các phần tử block, inline, dữ liệu
+    + Có trường hợp ngoại lệ là thẻ <a> (Kiểu inline) nhưng có thể chứa các phần tử kiểu block
+🛎️Class và Id
+* Class:
+- Thuộc tính class dùng để xác định một hoặc nhiều tên lớp cho phần tử HTML. Tên lớp có thể dùng trong CSS hoặc JavaScript để thực hiện một số tác vụ nhất định cho phần tử có tên lớp đó
+    + Một class có thể áp dụng cho được nhiều element, và các element này không nhất thiết phải cùng loại thẻ
+    + Một element có thể thêm được nhiều class
+    + Thuộc tính class có thể được sử dụng trên bất kỳ phần tử HTML nào
+    + Tên lớp có phân biệt chữ hoa chữ thường
+* Id
+- Thuộc tính id dùng để xác định một id duy nhất cho một element 
+    + Trong một trang các element không được phép trùng tên id
+    + Tên id có thể dùng trong CSS hoặc JavaScript để thực hiện một số tác vụ nhất định cho phần tử có tên id đó
+    + Tên id có phân biệt chữ hoa chữ thường
+    + Lưu ý: Tên id phải chứa ít nhất một ký tự, không được bắt đầu bằng số và không được chứa khoảng trắng (dấu cách, tab,...) 
+* Quy tắc đặt tên class và id (giống nhau):
+- Các ký tự là chữ cái viết thường: từ a->z
+- Các ký tự là chữ cái viết hoa: từ A->Z
+- Các ký tự là chữ số: từ 0->9
+- Dấu gạch dưới: _
+- Dấu gạch nối: -
+- Lưu ý: Tên id và tên class tuyệt đối:
+    + Không chứa các ký tự đặc biệt (ví dụ như !@#$%^&)
+    + Không bắt đầu là một số từ 0-9
+* Điểm khác nhau giữa "thuộc tính id" và "thuộc tính class":
+- Thuộc tính id:
+    + Một phần tử chỉ nhận một id
+    + Một tên id chỉ có thể dùng để đặt cho một phần tử duy nhất
+    + Khi muốn chọn một phần tử dựa theo id thì ta dùng cú pháp #ten-id
+- Thuộc tính class:
+    + Một phần tử có thể nhận một hoặc nhiều class
+    + Một tên class có thể dùng để đặt cho nhiều phần tử khác nhau
+    + Khi muốn chọn một phần tử dựa theo class thì ta dùng cú pháp .ten-class

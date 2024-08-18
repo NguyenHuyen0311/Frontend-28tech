@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1 {
+            background-color: blue;
+        }
+
+        .bg-image {
+            /* background-image: url(images/huaweiP50.png), url(images/me.jpg); */
+            /* background-image: linear-gradient(180deg, #000000, #ffffff); */
+            background-image: url(images/me.jpg);
+            /* background-size: 30% auto; */
+            /* background-size: contain; */
+            /* background-size: cover; */
+            background-size: 100px auto;
+            border: 5px solid #000;
+            width: 1200px;
+            height: 800px;
+            background-repeat: no-repeat;
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            /* background-position: top right; */
+            /* background-position: center bottom; */
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .bg-image {
+            background: blue url(images/huaweiP50.png) no-repeat top right;
+        }
+    </style>
+
+    <h1>Nội dung thẻ h1</h1>
+
+    <div class="bg-image">
+        Nội dung thẻ div 
+    </div>
+</body>
+</html>

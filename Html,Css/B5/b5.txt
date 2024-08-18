@@ -1,0 +1,89 @@
+28tech—Bài 5: Học CSS, CSS3 (Tiết 2)
+🛎️List (Danh sách)
+- list-style-type: chỉ định kiểu đánh dấu mục danh sách
++ list-style-type: disc; // Hình tròn đen. Mặc định
++ list-style-type: circle; // Hình tròn có viền đen và trống bên trong
++ list-style-type: square; // Hình vuông
++ list-style-type: disclosure-closed; // Hình tam giác trỏ sang phải
++ list-style-type: none; // Bị ẩn
++ list-style-type: upper-roman; // Chữ la mã I, II, III
++ list-style-type: lower-alpha; // Chữ cái a, b, c 
+- Link nghiên cứu thêm: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
+- list-style-position: chỉ định vị trí của các điểm đánh dấu mục danh sách
++ list-style-position: outside; // Các điểm đánh dấu nằm bên ngoài
++ list-style-position: inside; // Các điểm đánh dấu nằm bên trong 
+🛎️Table (Bảng)
+Code các bảng sử dụng HTML, CSS
+🛎️Display (Hiển thị)
+* Display (Hiển thị)
+- display: inline; (không đặt được chiều rộng và chiều cao, không thêm được margin và padding cho bên trên và bên dưới)
+- display: block; (Chiều rộng kéo dài từ trái sang phải, luôn bắt đầu ở một hàng mới. Cho phép đặt chiều rộng và chiều cao, cho phép đặt margin, padding cho bên trên và bên dưới)
+- display: inline-block; (Chiều rộng mặc định bằng chiều rộng của element, không bắt đầu ở một hàng mới. Cho phép đặt chiều rộng và chiều cao, cho phép đặt margin, padding cho bên trên và bên dưới)
+- display: none; (Ẩn đi hoàn toàn)
+* Visibility (Hiển thị)
+- visibility: hidden; // Ẩn nhưng vẫn chiếm một khoảng trống 
+- visibility: visible; // Hiển thị. mặc định
+🛎️Position (Vị trí)
+- Thuộc tính position để xác định vị trí element muốn hiển thị. Có 5 giá trị khác nhau: Static, Relative, Absolute, Fixed, Sticky
++ position: static; // Vị trí ở trạng thái mặc định của phần tử (tức là các thuộc tính top, bottom, right, left không có hiệu lực)
++ position: relative; // Vị trí tương đối so với vị trí mặc định và áp dụng được các thuộc tính top, bottom, right, left
++ position: absolute; // Vị trí tuyệt đối cho các thành phần theo thành phần bao ngoài hoặc cửa sổ trình duyệt
++ position: fixed; // Được định vị so với khung hình (viewport), có nghĩa là nó luôn ở một vị trí cố định ngay cả khi trang được cuộn.Các thuộc tính top, bottom, right, left được sử dụng để định vị element
++ position: sticky; // Có thể hiểu đơn giản là sự kết hợp của position: relative và position: fixed. Nó cũng na ná relative nhưng mà khi các bạn scroll đến vị trí của nó sẽ giống hệt như fixed và khi các bạn scroll lên ra khỏi nó thì nó sẽ quay lại vị trí ban đầu dưới dạng relative.
+🛎️Z-index 
+- Thuộc tính z-index thiết lập thứ tự xếp chồng nhau của một thành phần vị trí 
+- Giá trị mặc định là 0
+- z-index càng cao thì element đó càng nằm trên 
+- Chú ý: z-index chỉ làm việc cùng với các thuộc tính position có giá trị sau: absolute, fixed, relative, sticky. Đối với giá trị static thì z-index không áp dụng được
+🛎️Overflow (Tràn ra)
+- Thuộc tính overflow xác định điều gì sẽ xảy ra nếu một thành phần box tràn nội dung
+- Có các giá trị sau: 
++ overflow: visible; // Khi chiều cao của box không đủ chứa text, thì text vẫn hiển thị tràn qua box, đây là mặc định
++ overflow: hidden; // Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được ẩn đi
++ overflow: scroll; // Khi chiều cao của box không đủ chứa text, thì text bị tràn sẽ được ẩn đi và xuất hiện thanh scroll, khi cuộn sẽ hiển thị text. Khi sử dụng thành phần này sẽ xuất hiện cả thanh scroll ngang và dọc
++ overflow: auto; // Khi chiều cao của box không đủ chứa text, thì thanh scroll sẽ tự động hiển thị. Khi sử dụng thành phần này sẽ xuất hiện thanh scroll dọc
+🛎️Combinator selectors (Bộ chọn tổ hợp)
+- Adjacent sibling selectors (Bộ chọn anh chị em liền kề)
++ Chọn phần tử tag02 được đặt cùng cấp và phải kề ngay sau phần tử tag01 (mỗi tag01 chỉ có một tag02 kề ngay sau)
++ Cú pháp: tag01 + tag02 {}
+- General sibling selectors (Bộ chọn anh chị em chung)
++ Chọn tất cả phần tử tag02 cùng cấp với phần tử tag01, những thành phần tag02 phải nằm sau phần tử tag01 
++ Cú pháp: tag01 ~ tag02 {}
+- Child selectors (Bộ chọn con)
++ Chọn tất cả phần tử tag02 là cấp con đầu tiên (cấp 1) của phần tử tag01
++ Cú pháp: tag01 > tag02 {}
+- Descendant selectors (Bộ chọn hậu duệ)
++ Chọn tất cả phần tử tag02 bên trong phần tử tag01
++ Cú pháp: tag01 tag02 {}
+🛎️Pseudo-class selectors (Bộ chọn lớp giả)
+- Dùng để xác định trạng thái đặc biệt của một element
+- Cú pháp: 
+selector:pseudo-class {
+    property: value;
+}
+- Một số pseudo-class phổ biến:
++ :link: khi liên kết chưa được truy cập lần nào (Chỉ dùng cho thẻ a)
++ :visited: khi liên kết đã được truy cập sau lần đầu tiên (Chỉ dùng cho thẻ a)
++ :hover: khi di chuyển chuột lên element
++ :active: khi phần tử được click vào, áp dụng cho tất cả các thẻ 
++ :first-child: thiết lập thuộc tính cho element đầu tiên
++ :last-child: thiết lập thuộc tính cho element cuối cùng
++ :nth-child(n): n có thể là các giá trị even (chẵn), odd (lẻ), một số, một biểu thức (an + b)
+🛎️Pseudo-elements selectors (Bộ chọn phần tử giả)
+- Được sử dụng để tạo ra một phần tử giả và định kiểu (style) cho phần tử giả đó mà không cần tạo ra một phần tử thật
+- Cú pháp:
+selector::pseudo-element {
+    property: value;
+}
+- Danh sách pseudo-element:
++ ::before: Chèn nội dung nào đó trước nội dung của mỗi element (Phải thêm content:"";)
++ ::after: Chèn nội dung nào đó sau nội dung của mỗi element (Phải thêm content:"";)
++ ::first-letter: Chọn chữ cái đầu tiên của mỗi element
++ ::first-line: Chọn dòng đầu tiên của mỗi element
++ ::marker: Chọn các điểm đánh dấu của các mục danh sách (thẻ <ul> và <ol>)
++ ::selection: Được dùng để style cho một vùng văn bản được người dùng chọn (hay còn gọi là "bôi đen"). Chỉ có một số thuộc tính css khả dụng với ::selection là color, background, cursor và outline 
+🛎️Opacity (độ mờ)
+- Thuộc tính opacity chỉ định độ mờ / độ trong suốt của một element
+- Thuộc tính opacity có thể nhận giá trị từ 0 đến 1. Giá trị càng thấp thì element càng mờ
+- Cú pháp: 
+    opacity: 0.6; // Element sẽ mờ đi 40%

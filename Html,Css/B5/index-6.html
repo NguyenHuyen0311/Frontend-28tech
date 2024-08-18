@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <style>
+        a {
+            color: black;
+        }
+
+        a:link {
+            color: orange;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        .box {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box i {
+            display: none;
+        }
+
+        .box:hover {
+            background-color: orange;
+        }
+
+        .box:hover i {
+            display: inline;
+        }
+
+        .box:active {
+            background-color: red;
+        }
+    </style>
+
+    <a href="#123">
+        Link sang trang
+    </a>
+
+    <div class="box">
+        Nội dung
+        <i>Icon</i>
+    </div> -->
+
+    <!-- <style>
+        ul li:first-child {
+            color: red;
+            background-color: blue;
+        }
+
+        ul li:last-child {
+            color: orange;
+            background-color: black;
+        }
+
+        ul li:nth-child(3) {
+            color: rgb(231, 243, 231);
+            background-color: rgb(93, 123, 188);
+        }
+
+        ul li:nth-child(even) {
+            color: rgb(35, 192, 35);
+            background-color: rgb(177, 43, 96);
+        }
+
+        ul li:nth-child(odd) {
+            color: rgb(111, 147, 170);
+            background-color: rgb(221, 221, 32);
+        }
+
+        ul li:nth-child(2n+3) {
+            color: rgb(115, 123, 92);
+            background-color: rgb(98, 7, 226);
+        }
+    </style>
+
+    <ul>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+        <li>Mục 4</li>
+        <li>Mục 5</li>
+        <li>Mục 6</li>
+    </ul> -->
+
+    <style>
+        .box span {
+            background-color: orange;
+        }
+
+        .box-1::before {
+            content: "v";
+            background-color: orange;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            /* padding-top: 20px;
+            margin-top: 20px; */
+            display: inline-block;
+        }
+
+        .box-2::first-letter {
+            font-size: 40px;
+        }
+
+        .box-2::first-line {
+            text-transform: uppercase;
+        }
+
+        ul li::marker {
+            color: red;
+            font-size: 20px;
+        }
+
+        .text {
+            opacity: 0.1;
+        }
+
+        .text::selection {
+            background-color: red;
+            color: #263ba7;
+        }
+
+    </style>
+
+    <div class="box-1">
+        <!-- <span>Nội dung đằng trước</span> -->
+        Nội dung 1
+    </div>
+
+    <div class="box-2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum non nisi, quo numquam adipisci, aliquid minus reprehenderit quibusdam est accusantium eius voluptatum voluptatibus ullam fugiat, nobis tempora quasi ex inventore.
+    </div>
+
+    <ul>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+    </ul>
+
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum enim dolore quibusdam aspernatur accusamus minus aliquid nesciunt nemo eligendi totam blanditiis culpa hic iste ut id nam explicabo, ducimus itaque.
+    </p>
+</body>
+</html>

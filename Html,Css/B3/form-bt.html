@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+
+    <form action="https://www.w3schools.com/action_page.php" target="_blank">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="fullName">Họ tên: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="ho_ten" id="fullName" placeholder="Vui lòng nhập Họ tên">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Mật khẩu: </label>
+                    </td>
+                    <td>
+                        <input type="password" name="mat_khau" id="password" placeholder="Vui lòng nhập Mật khẩu">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Giới tính: </label>
+                    </td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="nam">
+                        <label for="male"> Nam </label><br>
+                        
+                        <input type="radio" id="female" name="gender" value="nữ">
+                        <label for="female"> Nữ </label><br>
+                        
+                        <input type="radio" id="none" name="gender" value="không">
+                        <label for="none"> Không công bố </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Sở thích: </label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="movie" name="hobbies" value="phim" checked>
+                        <label for="movie"> Xem phim </label><br>
+                        
+                        <input type="checkbox" id="book" name="hobbies" value="sách">
+                        <label for="book"> Đọc sách </label><br>
+                        
+                        <input type="checkbox" id="music" name="hobbies" value="nhạc" checked>
+                        <label for="music"> Nghe nhạc </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">Tuổi: </label>
+                    </td>
+                    <td>
+                        <input type="number" id="age" value="15" name="age">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="introduce">Giới thiệu bản thân: </label>
+                    </td>
+                    <td>
+                        <textarea name="note" id="introduce" rows="8" cols="60">Xin chào, tôi tên Huyền...</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email có thể liên hệ: </label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="link">Địa chỉ web của bạn: </label>
+                    </td>
+                    <td>
+                        <input type="url" id="link" name="link_web">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">Số điện thoại: </label>
+                    </td>
+                    <td>
+                        <input type="tel" id="phone" name="phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="time">Các loại chọn Thời gian</label>
+                    </td>
+                    <td>
+                        <h3>Ngày tháng</h3>
+                        <label for="date">Chọn ngày: </label>
+                        <input type="date" id="date" name="date"> <br/>
+                        <label for="month">Chọn tháng: </label>
+                        <input type="month" id="month" name="month"> <br/>
+                        <label for="week">Chọn tuần: </label>
+                        <input type="week" id="week" name="week"> <br/>
+
+                        <h3>Giờ</h3>
+                        <label for="time">Chọn Giờ: </label>
+                        <input type="time" id="time" name="time"> <br/>
+                        <label for="date_time">Chọn cả Ngày - Giờ: </label>
+                        <input type="datetime-local" id="date_time" name="date_time"> <br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="color">Màu yêu thích </label>
+                    </td>
+                    <td>
+                        <input type="color" name="color" id="color">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="city">Bạn đang sinh sống ở TP Tỉnh nào? </label>
+                    </td>
+                    <td>
+                        <input type="text" name="city" id="city">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button style="width: 200px; height: 50px">Gửi</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

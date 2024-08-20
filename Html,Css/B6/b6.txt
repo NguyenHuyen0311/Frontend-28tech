@@ -1,0 +1,198 @@
+28tech—Bài 6: Học CSS, CSS3 nâng cao (Tiết 1)
+🛎️Float và Clear 
+* Float 
+- Thuộc tính float là một thuộc tính được sử dụng để chuyển một phần tử sang góc trái hoặc góc bên phải của không gian bao quanh nó
+- Float có các giá trị sau:
++ float: left; // Phần tử nằm phía bên trái
++ float: right; // Phần tử nằm phía bên phải
++ float: none; // Phần tử nằm tại chính vị trí của nó (Mặc định)
+* Clear
+- Thuộc tính Clear là một thuộc tính ngược lại hoàn toàn với Float
+- Ngăn chặn phần tử B chiếm vùng không gian của phần tử A (với A là phần tử sử dụng float)
+- Thuộc tính clear có các giá trị sau:
++ clear: left; 
+    -- Ngăn chặn phần tử B chiếm chỗ phần tử A, khi phần tử A có sử dụng float: left;
+    -- Thuộc tính clear: left; không có tác dụng khi phần tử A sử dụng float: right;
++ clear: right; 
+    -- Ngăn chặn phần tử B chiếm chỗ phần tử A, khi phần tử A có sử dụng float: right;
+    -- Thuộc tính clear: right; không có tác dụng khi phần tử A sử dụng float: left;
++ clear: both;
+    -- Khi cả 2 phần tử A và phần tử B sử dụng float, chúng ta không thể sử dụng clear: left; hay clear: right; để ngăn chặn thành phần C chiếm vùng không gian còn trống, trong trường hợp này ta sử dụng thuộc tính clear: both; để ngăn chặn sự chiếm vùng của phần tử C
+    -- Thuộc tính clear: both; có thể ngăn chặn sự chiếm vùng không gian cả khi chỉ có một phần tử sử dụng float (left hoặc right)
++ clear: none;
+    -- Thuộc tính  clear: none; là dạng phục hồi khi Thành phần sử dụng thuộc tính clear
+🛎️Attribute selectors (Bộ chọn thuộc tính) 
+- Bộ chọn attribute được sử dụng để chọn các phần tử có thuộc tính được chỉ định
+- Một số kiểu chọn
++ [attribute]
+    -- Chọn tất cả các phần tử có thuộc tính [attribute]
++ [attribute="value"]
+    -- Chọn tất cả các phần tử có thuộc tính [attribute] phải chứa giá trị value
+    -- Chỉ được có giá trị duy nhất là value, nếu có thêm giá trị khác thì sẽ không được chọn 
+    -- Giá trị có thể bao gồm nhiều phần tử 
++ [attribute~="value"]
+    -- Chọn tất cả các phần tử có thuộc tính [attribute] phải chứa giá trị value
+    -- Nhưng value đó phải đứng độc lập, không được viết liền với từ khác
+    -- value phải là 1 từ khóa duy nhất
++ [attribute|="value"]
+    -- Chọn tất cả các phần tử có thuộc tính [attribute], giá trị có thể chính xác là giá trị được chỉ định hoặc giá trị được chỉ định theo sau dấu gạch nối (-)
+    -- Lưu ý: Giá trị phải là một từ nguyên vẹn, đơn lẻ như class="top" hoặc theo sau là dấu gạch ngang (-), như class="top-text"
++ [attribute^="value"]
+    -- Chọn tất cả các phần tử có thuộc tính [attribute] bắt đầu bằng giá trị value
+    -- Khác với [attribute|="value"] ở chỗ nó không có ngoại lệ và chọn tất cả các phần tử bắt đầu bằng value, được phép viết liền với các từ khác 
++ [attribute$="value"]
+    -- Chọn tất cả các phần tử có thuộc tính [attribute] kết thúc bằng giá trị value
+    -- Lưu ý: Giá trị có thể được viết liền với từ khác 
++ [attribute$="value"]
+    -- Chọn tất cả các phần tử có thuộc tính [attribute] chứa giá trị value
+    -- Lưu ý: Giá trị không nhất thiết phải là một từ nguyên vẹn! 
+🛎️Units (Đơn vị)
+* Độ dài tuyệt đối
+- Là loại đơn vị có giá trị cố định và thể hiện chính xác chiều dài kích thước nó hiển thị, không phụ thuộc cũng như không thay đổi bởi bất kỳ tác động bên ngoài nào 
+- Một số đơn vị:
++ cm 
++ mm 
++ in: inches (1in = 96px = 2.54cm)
++ px: pixels (1px = 1/96in) tương ứng với một điểm ảnh trên máy tính 
++ pt: points (1pt = 1/72in)
++ pc: picas (1pc = 12pt)
+* Độ dài tương đối
+- Là đơn vị đo lường được sử dụng trong CSS ở mức tương đối, thường phụ thuộc vào 1 thành phần nào đó thì mới xác định được giá trị của nó
+- Một số đơn vị:
++ %: giá trị tương đối so với phần tử cha
++ rem: giá trị tương đối với font-size của phần tử gốc. Phần tử gốc ở đây là thẻ html (font-size mặc định là 16px = 1rem)
++ em: 1em tương đương với kích cỡ của font-size của phần tử cha có định nghĩa font-size
++ vw (viewport width): 1vw tương đương với 1% của chiều rộng cửa sổ trình duyệt 
++ vh (viewport height): 1vw tương đương với 1% của chiều cao cửa sổ trình duyệt 
++ ex: 1ex tương đương với chiều cao (height) của một chữ x (in thường) của font hiện tại
++ ch: 1ch tương đương với chiều rộng (width) của một số 0 theo size hiện tại
+🛎️Specificity (Tính đặc hiệu) và !important (Quan trọng)
+* Specificity (Tính đặc hiệu)
+- Tính đặc hiệu (hay độ ưu tiên) là cách mà trình duyệt quyết định sẽ áp dụng thuộc tính css nào với một phần tử khi có nhiều quy tắc css cùng trỏ đến phần tử đó 
+- Sự phân cấp tính đặc hiệu: Mỗi selector đều có vị trí của nó trong hệ thống phân cấp. Độ đặc hiệu của selector có 4 mức:
+    -- Từ cao đến thấp: Inline -> ID -> Classes, Attributes, pseudo-classes -> Elements, pseudo-elements
+- Làm sao để tính toán tính đặc hiệu? Ta biểu diễn tương đối tính đặc hiệu của một selector như dưới đây, sau đó xem giá trị nào càng cao thì càng được ưu tiên:
++ 1-0-0-0: Inline styles
++ 0-X-0-0: Số lượng ID selector
++ 0-0-Y-0: Classes, Attributes, pseudo-classes
++ 0-0-0-Z: Số lượng Elements, pseudo-elements
++ Viết CSS theo kiểu Internal và External không có độ ưu tiên
++ Universal selector (*) và combinators selector (+, >, ~) không làm tăng tính đặc hiệu
+* !important (Quan trọng)
+- Important được sử dụng để thay đổi thứ tự ưu tiên của CSS, khi một thuộc tính CSS nào đó được gán lệnh important thì đồng nghĩa với việc nó sẽ có mức ưu tiên cao nhất. Nếu có nhiều thuộc tính cùng có !important thì lại quay về bài toán tính độ ưu tiên
+🛎️Math Functions (Hàm toán học)
+- Các hàm toán học CSS cho phép các biểu thức toán học được sử dụng làm giá trị thuộc tính 
+- Các hàm toán học: 
++ Hàm calc()
+    -- Thực hiện một phép tính, kết quả sẽ lấy làm giá trị thuộc tính. Các toán tử sau có thể được sử dụng: +-*/
+    -- Ví dụ: width: calc(100%-100px)
++ Hàm max()
+    -- SỬ dụng giá trị lớn nhất, từ danh sách giá trị được phân tách bằng dấu phẩy, làm giá trị thuộc tính 
+    -- Cú pháp: max(value1, value2,...)
+    -- Ví dụ: width: max(50%, 300px);
++ Hàm min()
+    -- SỬ dụng giá trị nhỏ nhất, từ danh sách giá trị được phân tách bằng dấu phẩy, làm giá trị thuộc tính 
+    -- Cú pháp: min(value1, value2,...)
+    -- Ví dụ: width: min(50%, 300px);
+🛎️CSS function attr()
+- attr() là một hàm CSS trả về giá trị của một thuộc tính 
+🛎️Variables (Biến)
+- Mục đích của khai báo biến là để có thể sử dụng được ở nhiều nơi
+- Kiểu global (toàn cục): có thể sử dụng được nhiều nơi trong file css 
+- Kiểu local (cục bộ): chỉ sử dụng được ở trong phạm vi của nó, những đoạn css khác không sử dụng được
+- Cách tạo biến global:
+    :root {
+        --ten-bien: giá trị;
+    }
+- Cách sử dụng biến:
+    var(--ten-bien);
+- Cách tạo biến local:
+    selector {
+        --ten-bien: giá trị;
+    }
+- Cách sử dụng biến:
+    selector {
+        --ten-bien: giá trị;
+        var(--ten-bien);
+    }
+🛎️Box Sizing (Kích thước hộp)
+- Mặc định khi ta sử dụng thuộc tính width, height thì chỉ áp dụng cho phần content của 1 element
+- 2 loại box-sizing:
++ content-box: 
+    -- Mặc định. Width/height chỉ bao gồm "nội dung" của phần tử 
+    -- width, height = content
++ border-box: 
+    -- Width/height bao gồm: content, padding, border của phần tử 
+    -- width, height = content + padding + border
+🛎️Khái niệm Responsive
+- Responsive là để chỉ một website có thể hiển thị tương thích trên mọi thiết bị, như máy tính, máy tính bảng, điện thoại
+- Sử dụng media query để responsive giao diện
+- Khai báo thẻ meta viewport: 
++ <meta name="viewport" content="width=device-width,initial-scale=1.0">
++ Trong đó:
+    -- viewport: Giúp trình duyệt hiểu thẻ meta này dùng để thiết lập khung nhìn
+    -- width=device-width: Đặt chiều rộng bằng chiều rộng thiết bị (device-width)
+    -- initial-scale=1.0: Mức thu phóng của website. initial-scale thường được đặt bằng 1 (có thể tăng giá trị lên nhưng không được khuyến nghị)
+🛎️Media Queries
+- @media CSS là một tính năng mới của CSS3 
+- Tính năng này cho phép ta tùy chỉnh CSS cho nhiều thiết bị khác nhau từ máy tính cho đến ipad, điện thoại và các thiết bị in ấn
+- Cú pháp:
+    @media mediaType and (mediaFeature) {
+        // Code
+    }
+- Trong đó:
++ mediaType gồm các thuộc tính hay sử dụng sau:
+    -- all: Dùng cho mọi thiết bị
+    -- print: Dùng cho máy in
+    -- screen: Dùng cho máy tính và các thiết bị di động
++ mediaFeature gồm các thuộc tính hay sử dụng sau:
+    -- max-width: Chiều rộng tối đa của viewport
+    -- min-width: Chiều rộng tối thiểu của viewport
+- PC first (Responsive)
++ PC first là khái niệm để chỉ việc lập trình giao diện từ màn hình to đến màn hình nhỏ
++ Để làm việc với mô hình này chúng ta sử dụng max-width trong media query
+<style>
+    /* Ipad ngang (1024 x 768) */
+    @media screen and (max-width: 1024px) {
+        /* Code */
+    }
+
+    /* Ipad dọc (768 x 1024) */
+    @media screen and (max-width: 768px) {
+        /* Code */
+    }
+
+    /* Smart phone (480 x 640) */
+    @media screen and (max-width: 480px) {
+        /* Code */
+    }
+
+    /* Smart phone nhỏ */
+    @media screen and (max-width: 320px) {
+        /* Code */
+    }
+</style>
+- Mobile first
++ Mobile first là khái niệm để chỉ việc lập trình giao diện từ màn hình nhỏ đến màn hình to 
++ Để làm việc với mô hình này chúng ta sử dụng min-width trong media query
+<style>
+    /* Smart phone nhỏ */
+    @media screen and (min-width: 320px) {
+        /* Code */
+    }
+
+    /* Smart phone (480 x 640) */
+    @media screen and (min-width: 480px) {
+        /* Code */
+    }
+
+    /* Ipad dọc (768 x 1024) */
+    @media screen and (min-width: 768px) {
+        /* Code */
+    }
+
+    /* Ipad ngang (1024 x 768) */
+    @media screen and (min-width: 1024px) {
+        /* Code */
+    }
+</style>

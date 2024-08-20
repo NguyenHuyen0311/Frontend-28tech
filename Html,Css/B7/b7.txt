@@ -1,0 +1,103 @@
+28tech—Bài 7: Học CSS, CSS3 nâng cao (Tiết 2)
+🛎️Flexbox
+* Flexbox là gì?
+- Flexbox Layout là một kiểu bố cục trang có khả năng:
++ Tự cân đối kích thước
++ Thay đổi chiều rộng / chiều cao
++ Thay đổi thứ tự phần tử
+- Flexbox có 2 thành phần là:
++ container: là phần tử cha dùng để bọc bên ngoài
++ item: là phần tử con của container
+* Các thuộc tính của Flex 
+- display flex 
++ Giúp sắp xếp các phần tử một cách dễ dàng, linh hoạt hơn trước
++ Cú pháp:
+    selector {
+        display: gia-tri;
+    }
++ Các giá trị
+    -- flex: Giúp các thành phần linh hoạt. Chiều rộng bằng 100%
+    -- inline-flex: Giúp các thành phần linh hoạt. Chiều rộng bằng chiều rộng của các item bên trong
+- flex-direction
++ Xác định hướng của main-axis để container sắp xếp lại các item
++ Cú pháp:
+    selector {
+        flex-direction: gia-tri;
+    }
++ Các giá trị
+    -- row: Mặc định. Item được sắp xếp theo chiều ngang, từ trái qua phải
+    -- row-reverse: Item được sắp xếp theo chiều ngang, từ phải qua trái
+    -- column: Item được sắp xếp theo chiều dọc, từ trên xuống dưới
+    -- column-reverse: Item được sắp xếp theo chiều dọc, từ dưới lên trên
+- flex-wrap
++ Thuộc tính flex-wrap cho phép item có tự động xuống dòng hay không khi kích thước container thay đổi
++ Cú pháp:
+    selector {
+        flex-wrap: gia-tri;
+    }
++ Các giá trị
+    -- nowrap: Mặc định, tất cả các item sẽ nằm trên một dòng
+    -- wrap: Khi tổng chiều rộng các item cộng lại lớn hơn chiều rộng của container thì item sẽ tự động xuống dòng
+    -- wrap-reverse: Tương tự như wrap, nhưng thay vì xuống dòng thì item sẽ tự động nhảy lên trên
+- justify-content
++ Thuộc tính justify-content để điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục main-axis 
++ Cú pháp:
+    selector {
+        justify-content: gia-tri;
+    }
++ Các giá trị
+    -- flex-start: Mặc định. Item sẽ bắt đầu từ lề chính main-start của container
+    -- flex-end: Item sẽ bắt đầu từ lề chính main-end của container (khác với flex-direction: row--reverse; là đổi hướng hiển thị)
+    -- center: Item sẽ nằm giữa container
+    -- space-between: Khoảng cách giữa các item bằng nhau. Item đầu tiên và cuối cùng sát với lề
+    -- space-around: Tương tự space-between, nhưng khác ở chỗ: Khoảng cách giữa item và lề = 1/2 khoảng cách giữa item và item 
+    -- space-evenly: Tương tự space-between, nhưng khác ở chỗ: Khoảng cách giữa item và lề = khoảng cách giữa item và item 
+- align-items
++ Thuộc tính align-items sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục cross-axis
++ Dùng để căn chỉnh cho một dòng
++ Cú pháp:
+    selector {
+        align-items: gia-tri;
+    }
++ Các giá trị
+    -- stretch: Mặc định. Các phần tử sẽ tự động tăng chiều cao để lấp đầy chiều cao của container, nhưng sẽ ưu tiên giá trị height (nếu có)
+    -- flex-start: Item sẽ bắt đầu từ lề cross-start của container
+    -- flex-end: Item sẽ bắt đầu từ lề cross-end của container
+    -- center: Item sẽ căn giữa theo chiều của cross-axis
+- align-content
++ Thuộc tính align-content sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục cross-axis
++ Dùng để căn chỉnh cho nhiều dòng
++ Cú pháp:
+    selector {
+        align-content: gia-tri;
+    }
++ Các giá trị
+    -- stretch: Mặc định. Các phần tử sẽ tự động tăng chiều cao sao cho lấp đầy container (Vẫn ưu tiên giá trị height nếu có)
+    -- flex-start: Item sẽ bắt đầu từ lề chứa cross-start của container
+    -- flex-end: Item sẽ bắt đầu từ lề chứa cross-end của container
+    -- center: Item sẽ nằm giữa container căn theo cross-axis
+    -- space-between: Khoảng cách giữa các item bằng nhau. Item đầu tiên và cuối cùng sát với lề
+    -- space-around: Tương tự space-between, nhưng khác ở chỗ: Khoảng cách giữa item và lề = 1/2 khoảng cách giữa item và item 
+    -- space-evenly: Tương tự space-between, nhưng khác ở chỗ: Khoảng cách giữa item và lề = khoảng cách giữa item và item 
+- align-self
++ Tương tự như align-items nhưng là áp dụng cho một item nào đó
++ Cú pháp:
+    selector {
+        align-self: gia-tri;
+    }
++ Các giá trị
+    -- auto: Mặc định
+    -- stretch: Các phần tử sẽ tự động tăng chiều cao để lấp đầy chiều cao của container, nhưng sẽ ưu tiên giá trị height (nếu có)
+    -- flex-start: Item sẽ bắt đầu từ lề cross-start của container
+    -- flex-end: Item sẽ bắt đầu từ lề cross-end của container
+    -- center: Item sẽ căn giữa theo chiều của cross-axis
+- order
++ Thuộc tính order dùng để sắp xếp lại vị trí của các item 
++ Cú pháp:
+    selector {
+        order: gia-tri; /* mặc định là 0 */
+    }
++ Trong đó gia-tri >= 0
+🛎️Tập cắt lại giao diện ở bài tập buổi 6
+🛎️Giao bài project mini 1
+🛎️Câu hỏi trắc nghiệm về CSS và CSS3

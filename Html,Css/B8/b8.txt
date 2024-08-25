@@ -1,0 +1,15 @@
+28tech—Bài 8: Thực hành những kiến thức đã học
+🛎️Dựng cấu trúc thư mục và file
+🛎️Thêm code reset CSS vào project
+- Do trình duyệt có sẵn một số thuộc tính mặc định cho một số thẻ, sẽ gây ảnh hưởng tương đối nhiều khi ta viết CSS 
+- Chính vì vậy người ta mới nghĩ ra file reset CSS để khắc phục những nhược điểm ấy
+- Link file reset CSS phổ biến: https://cdnjs.com/libraries/normalize
+- Lưu ý: Nhúng file đuôi .min.css để loại bỏ khoảng trắng và các comment không cần thiết, giúp cho file nhẹ hơn, web sẽ load nhanh hơn
+🛎️Làm bài tập responsive giao diện
+- Sử dụng những kiến thức đã học để làm bài tập sau:
+- Các bước làm:
++ Bước 1: Dựng cấu trúc thư mục 
++ Bước 2: Thêm file reset
++ Bước 3: Thêm icon vào web. Sử dụng font-awesome (https://cdnjs.com/libraries/font-awesome)
++ Bước 4: Dựng file CSS base gồm: color, font-family, khung container
++ Bước 5: Code từng box có trong giao diện

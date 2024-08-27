@@ -1,0 +1,10 @@
+28tech—Bài 10: Học Boostrap 4 (Tiết 2)
+🛎️Components: Collapse, Dropdowns, Forms, Modal, Navs, Pagination
+* Collapse (Sự biến hình) - Hay sử dụng
+* Dropdowns (Thả xuống)
+* Forms (Biểu mẫu) - Hay sử dụng
+* Modal - Hay sử dụng
+* Navs - Hay sử dụng
+- Ví dụ: https://thamtraisanhp.vn/
+* Pagination
+🛎️Dựng layout tiếp ở bài 9

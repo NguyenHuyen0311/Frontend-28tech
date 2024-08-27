@@ -1,0 +1,73 @@
+28tech—Bài 9: Học Boostrap 4 (Tiết 1)
+🛎️Giới thiệu và hướng dẫn tích hợp vào web
+* Giới thiệu:
+- Boostrap là một framework của css và javascript. Hay nói cách khác, nó là những đoạn code viết sẵn
+- Định nghĩa sẵn các class trong css và các hàm trong javascript. Chúng ta chỉ việc sử dụng các class này để tùy chỉnh thêm
+- Giảm thiểu bớt việc viết code, đóng vai trò như bộ khung nền, giúp phát triển web nhanh hơn
+- Hỗ trợ đa dạng, có sẵn nhiều component (thành phần)
+- Link website: https://getbootstrap.com/
+* Hướng dẫn tích hợp vào web 
+- Cách 1: Nhúng link CDN (Link trực tuyến trên server). Xem cách nhúng trên trang getbootstrap.com 
+- Cách 2: Tải về và dùng trực tiếp ở local. Tải mã nguồn tại getbootstrap.com 
++ Nhúng file css vào trong thẻ head:
+<link rel="stylesheet" href="css/boostrap.min.css" />
++ Nhúng 2 file js vào cuối thẻ body:
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/boostrap.bundle.min.js"></script>
+🛎️Dựng layout và sử dụng Grid
+* Giới thiệu class .container
+- .container: Giúp element căn đều 2 lề và có độ rộng tối đa là 1140px
+- Có padding-left và padding-right là 15px
+- Các kích thước của .container ở các màn hình có kích thước khác nhau:
++ Extra small (<576px): 100%
++ Small (>=576px): 540px
++ Medium (>=768px): 720px
++ Large (>=992px): 960px
++ Extra large (>=1200px): 1140px
+* Giới thiệu class .container-fluid
+- .container-fluid: Có độ rộng full màn hình (kéo dài từ trái sang phải)
+- Có padding-left và padding-right là 15px
+- Các kích thước của .container-fluid ở các màn hình có kích thước khác nhau là 100%
+* Giới thiệu media query của Boostrap cho PC First
+/* Kích thước nhỏ hơn 1200px */
+@media (max-width: 1199.98px) {
+    /* Code */
+}
+
+/* Kích thước nhỏ hơn 992px */
+@media (max-width: 991.98px) {
+    /* Code */
+}
+
+/* Kích thước nhỏ hơn 768px */
+@media (max-width: 767.98px) {
+    /* Code */
+}
+
+/* Kích thước nhỏ hơn 576px */
+@media (max-width: 575.98px) {
+    /* Code */
+}
+* Grid (Lưới)
+- Grid System (hệ thống lưới) trong Boostrap được xây dựng với flexbox
+- Cho phép tạo tới 12 cột trên một trang 
+- Nếu bạn không muốn sử dụng tất cả 12 cột riêng biệt thì có thể nhóm chúng lại với nhau để tạo ra những cột rộng hơn
+- Hệ thống lưới này có thể responsive, có nghĩa là các cột có thể tự động sắp xếp lại để phù hợp với kích thước của màn hình 
++ Extra small (<576px): None(auto) - .col-
++ Small (>=576px): 540px - .col-sm-
++ Medium (>=768px): 720px - .col-md-
++ Large (>=992px): 960px - .col-lg-
++ Extra large (>=1200px): 1140px - .col-xl-
+- Ví dụ: Dựng lại một số box trong layout sau sử dụng container, container-fluid, grid và responsive giao diện
+- Link demo: https://bootstrapmade.com/demo/templates/Green/
+🛎️Components: Alerts, Badge, Breadcrumb, Buttons, Carousel
+* Alerts
+- Dùng để hiển thị cảnh báo, thông báo
+* Badge
+- Dùng để hiển thị biển hiệu
+* Breadcrumb
+- Là một tập hợp những liên kết giúp người dùng xác định vị trí hiện tại của mình trong cấu trúc website
+* Buttons
+* Carousel
+- Carousel (Băng chuyền) là một slider 
+🛎️Ứng dụng kiến thức đã học làm bài tập thực tế

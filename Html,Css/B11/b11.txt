@@ -1,0 +1,14 @@
+28tech—Bài 11: Học Boostrap 4 (Tiết 3)
+🛎️Một số Utilities phổ biến
+* Colors
+- Colors
+- Background color 
+* Display inline và block
+* Flex
+- Display flex
+* Float
+* Text
+🛎️Làm bài tập
+🛎️Giao bài project mini 2
+- Link giao diện: https://templatemo.com/templates/templatemo_535_softy_pinko/
+- Yêu cầu: Code lại giao diện trên sử dụng Boostrap 4 và responsive giao diện

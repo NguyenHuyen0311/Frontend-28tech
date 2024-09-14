@@ -1,0 +1,252 @@
+28tech—Javascript cơ bản (Tiết 1)
+🛎️Khái niệm và giới thiệu
+* Khái niệm 
+- Javascript (viết tắt là JS) là một ngôn ngữ lập trình kịch bản dựa vào các đối tượng có sẵn hoặc do lập trình viên tự định nghĩa
+* Giới thiệu
+- Trước đây, Javascript được sử dụng chủ yếu để nâng cao sự tương tác của người dùng với trang web. Ví dụ làm các hiệu ứng đặc biệt như sliders, popup, hoặc xác thực dữ liệu các form (form validations) trước khi gửi dữ liệu lên server (máy chủ)
+- Ngày nay, Javascript không chỉ giới hạn trong khuôn khổ xây dựng ứng dụng web, mà còn sử dụng rộng rãi trong phát triển ứng dụng, game trên điện thoại hay các ứng dụng dành cho server 
++Web app: Reacjs, Vuejs, Angularjs…
++Mobile app: React Native…
++Server app: Nodejs, Expressjs
++Graphic: two.js (2D), three.js (3D)…
++AI: brain.js…
++Nhiều lĩnh vực khác nữa mà Javascript có thể làm được
+* Viết chương trình “Hello World”
+<button onclick="alert('Hello World!')">
+    Click Me 
+</button>
+* Các cách sử dụng javascript
+C1: Inline - viết trực tiếp trong thẻ HTML
+C2: Internal - viết trong file HTML hiện tại
+C3: External - viết ra một file js khác  rồi nhúng vào trang HTML
+🛎️Variables (Biến) 
+* Khái niệm: là nơi để bạn có thể lưu trữ thông tin
+* Khai báo biến bằng từ khóa var (variable - biến)
+- Cú pháp: var tenBien = giaTri;
+- Trong đó:
+    + tenBien: là tên của biến các bạn muốn đặt
+    + giaTri: là giá trị của biến, có thể là số, chuỗi, mảng, object
+* Lưu ý: tên biến có phân biệt chữ hoa, chữ thường
+* Quy tắc đặt tên biến
+•Bắt đầu phải là chữ cái hoặc ký tự ‘_’
+•Không được bắt đầy bằng số (0->9)
+•Không được bắt đầu bằng ký tự đặc biệt (ví dụ #, %, ^, -)
+- Đặt tên đúng
++ var TenBien = 10; // PascalCase
++ var ten_bien = 10; // snake_case
++ var tenBien = 10; // camelCase
+...
+🛎️Operators (Toán tử)
+<1> Arithmetic (Toán tử số học)
+- Là toán tử dùng để thực hiện các phép toán số học
+- Danh sách các toán tử số học: +, -, *, /, %, ** (phép luỹ thừa), ++, - -
+* Toán tử ++
+    - Phép tăng giá trị hiện tại lên 1 đơn vị 
+    - Hai cách sử dụng 
+        + Đặt trước biến (prefix - tiền tố): nó sẽ tăng trước khi lấy giá trị 
+        + Đặt sau biến (postfix - hậu tố): nó sẽ lấy giá trị rồi mới tăng lên 
+* Toán tử ++
+    - Phép giảm giá trị hiện tại xuống 1 đơn vị 
+    - Hai cách sử dụng 
+        + Đặt trước biến (prefix - tiền tố): nó sẽ giảm trước khi lấy giá trị 
+        + Đặt sau biến (postfix - hậu tố): nó sẽ lấy giá trị rồi mới giảm lên 
+<2> Assignment (Toán tử gán)
+- Dùng để gán giá trị cho một biến
+- Danh sách các toán tử gán: =, +=, -=, *=,  /=, %=
+<3> Comparison (Toán tử so sánh)
+- Là toán tử hai ngôi dùng để so sánh giá trị của hai toán hạng với nhau
+- Danh sách các toán tử so sánh: >, <, >=, <=, == (không nghiêm ngặt), === (nghiêm ngặt), != (không nghiêm ngặt), !== (nghiêm ngặt)
+<4> Logical (Toán tử logic)
+- Là toán tử kết nối hai hay nhiều biểu thức, dùng để kiểm tra mối quan hệ logic giữa các biểu thức. Kết quả cuối cùng phụ thuộc vào giá trị của từng biểu thức và loại toán tử logic
+- Danh sách các toán tử logic: && (AND),  || (OR),  ! (NOT)
+🛎️Data Types (Kiểu dữ liệu)
+<1> Nguyên thuỷ (Primitive Data)
+- Là kiểu dữ liệu mà giá trị không thay đổi được
+- Có 6 kiểu: Number, String, Boolean, Undefined, Null, Symbol
+* Kiểu Number
+- Là kiểu dữ liệu dạng số
+- Hai loại số: số nguyên và số thực
+- 3 số đặc biệt là:
+• Infinity: là số dương vô cùng
+• -Infinity: là số âm vô cùng
+• NaN: viết tắt của Not a Number, những trường hợp tính toán sai hoặc kết quả của một phép tính không xác định
+* Kiểu String
+- Là kiểu dữ liệu dùng để biểu diễn chữ, văn bản, đoạn văn bản,…
+- 3 cách:
+• Dùng dấu nháy đơn: ‘
+• Dùng dấu nháy kép: “
+• Dùng dấu backtick: (dấu huyền)
+* Kiểu Boolean
+- Là kiểu dữ liệu logic chỉ bao gồm 2 giá trị true và false
+* Kiểu Undefined
+- Là kiểu dữ liệu mà khi khai báo ra một biến và không gán giá trị thì kết quả trả về là undefined
+* Kiểu null
+- Là kiểu dữ liệu đặc biệt, chỉ bao gồm một giá trị là null (không biết giá trị, không có giá trị)
+* Sự khác nhau cơ bản giữa undefined và null
+- Kiểu dữ liệu null là kiểu dữ liệu được gán cho biến, thường được hiểu là không biết (không có)
+- Kiểu dữ liệu undefined là giá trị mặc định của biến sau khi khai báo mà không gán giá trị cho biến 
+* Kiểu Symbol
+- Là kiểu dữ liệu nguyên thuỷ dùng để tạo ra các giá trị duy nhất (unique value) và bất biến (immutable)
+- Symbol thường được dùng làm key cho kiểu dữ liệu object
+<2> Dữ liệu phức tạp (Complex Data)
+- Có 2 kiểu: Function, Object
+* Kiểu Function
+- Là một chương trình con giúp thực thi một công việc cụ thể 
+- Cú pháp: 
+function temHam(thamSo1, thamSo2,…) {}
+* Kiểu Object 
+- Object là kiểu dữ liệu tham chiếu. Có thể hiểu object là một tập hợp gồm các cặp key-value (khóa-giá trị)
+- Kiểu dữ liệu của key có thể là string hoặc symbol 
+- Value ứng với key có thể là bất kỳ kiểu dữ liệu nào
+- Có 2 loại: Object và Array
+- Cú pháp:
++ Object                             
+var tenBien = {                    
+    key1: “value 1”,                  
+    key2: “value 2”,                 
+    …                                        
+}               
++ Array                
+var tenBien = [    
+     “value 1”,
+     “value 2”,
+     …  
+]
+🛎️Một số hàm built-in
+- Là những hàm được js định nghĩa sẵn, chúng ta chỉ việc sử dụng
+* Hàm alert()
+- Có nhiệm vụ in ra một thông báo popup
+- Nó có một tham số truyền vào và tham số này chính là nội dụng thông báo
+- Cú pháp: alert(message);
+* Hàm confirm()
+- Hiển thị thông báo popup và có thêm hai lựa chọn Yes và No
+- Nếu chọn Yes thì trả về True và ngược lại
+- Nó có một tham số truyền vào và tham số này chính là nội dụng thông báo
+- Cú pháp: confirm(message);
+* Hàm prompt()
+- Dùng để lấy thông tin người dùng
+- Gồm hai tham số truyền vào là nội dung thông báo và giá trị ban đầu
+- Cú pháp: prompt(title, defaultValue);
+title: nội dung chữ hiển thị
+defaultValue: giá trị mặc định cho ô nhập (không bắt buộc)
+* Hàm console
+- Dùng để in ra nội dung ở tab console trên dev tools
+- Có 3 hàm hay sử dụng là:
++ console.log(): in ra thông báo
++ console.warn(): in ra cảnh báo
++ console.error(): in ra lỗi
+* Hàm setTimeout()
+- Code sẽ chạy 1 lần duy nhất sau một khoảng thời gian
+- Cú pháp:
+setTimeout (function () {
+     //code
+}, time);
+* Hàm setInterval()
+- Code sẽ chạy lặp lại sau một khoảng thời gian
+- Cú pháp: 
+setInterval (function () {
+     //code
+}, time);
+🛎️Typeof
+- Cho phép trả về kiểu của một biến
+- Nó hữu ích khi chúng ta muốn xử lý các giá trị của các kiểu khác nhau hoặc chỉ muốn kiểm tra nhanh
+- Cú pháp: typeof x (x là một biến hoặc một biểu thức)
+🛎️Làm việc với String
+<1> Length
+- Trả về độ dài của chuỗi
+<2> indexOf()
+- Tìm vị trí đầu tiên của một chuỗi nằm trong một chuỗi
+- Nếu không tìm thấy sẽ trả về -1
+- Có phân biệt chữ hoa, chữ thường
+- Cú pháp: string.indexOf(searchvalue, start)
+searchvalue: Giá trị cần tìm kiếm (bắt buộc)
+start: Vị trí bắt đầu tìm kiếm (tính từ trái qua phải) và sẽ tìm kiếm xuôi tiếp (mặc định bắt đầu từ 0)
+<3> lastIndexOf()
+- Tìm vị trí cuối cùng của một chuỗi nằm trong một chuỗi
+- Nếu không tìm thấy sẽ trả về -1
+- Có phân biệt chữ hoa, chữ thường
+- Cú pháp: string.lastIndexOf(searchvalue, start)
+searchvalue: Giá trị cần tìm kiếm (bắt buộc)
+start: Vị trí bắt đầu tìm kiếm (tính từ trái qua phải) và sẽ tìm kiếm ngược lại (mặc định bắt đầu từ 0)
+<4> slice()
+- Dùng để cắt một chuỗi và trả về một chuỗi mới
+- Chuỗi ban đầu không thay đổi
+- Cú pháp: string.slice(start, end)
+start: Vị trí bắt đầu cắt (bắt buộc)
+end: Vị trí kết thúc cắt (không bắt buộc)
+<5> replace()
+- Dùng để thay thế 1 chuỗi thành 1 chuỗi mới
+- Nhưng chỉ thay thế chuỗi ban đầu mà nó tìm thấy
+- Muốn thay thế được tất cả các từ tìm thấy thì phải dùng Regular Expression (Biểu thức chính quy)
+- Cú pháp: string.replace(searchValue, newValue)
+searchValue: Từ khoá cần thay thế (bắt buộc)
+newValue: Từ khoá mới để thay thế (bắt buộc)
+<6> toUpperCase() và toLowerCase()
+- toUpperCase() dùng để viết hoa tất cả các chữ cái
+- toLowerCase() dùng để viết thường tất cả các chữ cái
+<7> trim()
+- Dùng để bỏ đi khoảng trắng ở 2 đầu
+- Các khoảng trắng giữa các ký tự không bị loại bỏ
+- Cú pháp: string.trim()
+<8> chartAt()
+- Dùng để lấy ký tự thông qua index
+- Cú pháp: string.chartAt(index)
+index: Vị trí của ký tự cần lấy
+<9> split()
+- Chuyển một chuỗi thành một array
+- Nhưng cần tìm ra điểm chung của chuỗi đó
+🛎️Làm việc với Number
+<1> isNaN()
+- Dùng để kiểm tra một biến có phải NaN không
+- Cú pháp: isNaN(tenBien)
+<2> toString()
+- Chuyển kiểu số thành kiểu string
+- Cú pháp: tenBien.toString()
+<3> toFixed()
+- Dùng để làm tròn số thập phân
+- Nếu số ngay sau số cần làm tròn >=5 thì sẽ làm tròn lên, <5 sẽ làm tròn xuống
+- Cú pháp: toFixed(digits)
+digits: số chữ số sau dấu thập phân (0 <= digits <= 100). Không điền mặc định là 0
+🛎️Làm việc với Array
+<1> toString()
+- Chuyển array thành string
+- Tự động thêm dấu phẩy ngăn cách
+- Cú pháp: array.toString()
+<2> join()
+- Chuyển array thành string
+- Thêm dấu bất kỳ để ngăn cách giữa các phần tử
+- Cú pháp: array.join(separator)
+separator (dải phân cách) là dấu ngăn cách để thêm vào string. Mặc định dấu “,”
+<3> pop()
+- Dùng để xoá phần tử cuối mảng
+- Trả về phần tử cuối mảng
+- Cú pháp: array.pop()
+<4> push()
+- Thêm một hoặc nhiều phần tử vào cuối mảng
+- Trả về độ dài mới của mảng
+- Cú pháp: array.push(item1, item2, …, itemX)
+<5> shift()
+- Dùng để xoá phần tử đầu mảng
+- Trả về phần tử ở đầu mảng
+- Cú pháp: array.shift()
+<6> unshift()
+- Thêm một hoặc nhiều phần tử vào đầu mảng
+- Trả về độ dài mới của mảng
+- Cú pháp: array.unshift(item1, item2, …, itemX)
+<7> splice()
+- Xoá hoặc chèn phần tử mới vào mảng
+- Trả về mảng bị xoá
+- Cú pháp: array.splice(index,howmany,item1,..,itemX)
+index: Vị trí thêm/xoá phần tử (bắt buộc)
+howmany: Số phần tử cần xoá (không bắt buộc)
+item1,…,itemX: Các phần tử mới được thêm vào (không bắt buộc)
+<8> concat()
+- Dùng để nối 2 array
+- Không làm ảnh hưởng đến mảng ban đầu
+- Cú pháp: array1.concat(array2, array3,…,arrayX)
+<9> slice()
+- Dùng để cắt các phần tử
+- Không làm ảnh hưởng đến mảng ban đầu
+- Cú pháp: array.slice(start, end)
+start: Vị trí bắt đầu. Mặc định là 0 (không bắt buộc)
+end: Vị trí kết thúc. Mặc định là phần tử cuối cùng (không bắt buộc)

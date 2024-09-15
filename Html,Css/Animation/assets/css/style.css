@@ -1,0 +1,13 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Section Slick */
+.product-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+/* End Section Slick */

@@ -1,0 +1,125 @@
+28tech—Javascript cơ bản (Tiết 4)
+🫵BOM (Browser Object Model)
+* Khái niệm:
+- Là các đối tượng liên quan đến trình duyệt
+- Dùng để truy vết lịch sử lướt web, lưu các hành động và trạng thái, thông tin của người dùng
+- Các loại BOM:
++ window
++ screen
++ location
++ history
++ navigator
++ popup
++ timing
++ cookies
+🫵BOM Window
+- Khái niệm: 
++ window là một đối tượng có những phương thức và thuộc tính được dùng để xử lý trình duyệt
++ window có cấp độ cao nhất
+- innerHeight và innerWidth
++ innerHeight để lấy kích thước chiều cao của tài liệu: window.innerHeight;
++ innerWidth để lấy kích thước chiều rộng của tài liệu: window.innerWidth;
+- window.open()
++ Để mở một cửa sổ mới
++ Cú pháp: window.open(url, name, options);
+Trong đó:
+url: đường dẫn website muốn mở
+name: tên đặt cho cửa sổ này
+options: một chuỗi các thông số được cách nhau bởi dấu phẩy, sau đây là các thông số thông dụng
+     -height: chiều cao của cửa sổ(px)
+     -width: chiều rộng của cửa sổ(px)
+     -top: vị trí hiển thị cửa sổ so với lề trên(px)
+     -left: vị trí hiển thị cửa sổ so với lề trái(px)
+- window.close()
++ Để đóng cửa sổ
++ Cú pháp:
+// gọi hàm mở cửa sổ
+var myWindow = window.open(url, name, options);
+// gọi hàm đóng cửa sổ
+myWindow.close();
+- window.location.href
++ Để lấy đường dẫn hiện tại của trang web 
++ Cú pháp: window.location.href;
+🫵BOM Screen
+- screen.width để lấy chiều rộng màn hình máy tính 
+- screen.height để lấy chiều cao màn hình máy tính
+☠️Lưu ý: Không phải kích thước màn hình trình duyệt
+- Cú pháp:
+screen.width;
+screen.height;
+🫵BOM Location
+- Khái niệm:
++ location là 1 đối tượng được dùng để xử lý các vấn đề liên quan đến URL của trang web
++ Cú pháp:
+window.location;
+// hoặc
+location;
+- Phương thức reload()
++ Để load lại trang web
++ Cú pháp: location.reload;
+- Các thuộc tính:
++ hash: lấy phần sau dấu “#” của URL
++ host: lấy hostname và post của URL
++ hostname: lấy tên host (không lấy ra port)
++ href: lấy toàn bộ URL
++ origin: trả về protocol, hostname và port của URL
++ pathname: lấy path name của URL
++ port: lấy port của URL
++ search: lấy phần query string của URL (sau dấu ?)
+🫵BOM History
+- Khái niệm: 
++ Dùng để quản lý lịch sử lướt web
++ Khi bạn lướt web thì trình duyệt sẽ lưu lại lịch sử lướt web của bạn. Dựa vào lịch sử đó, ta có thể xem lại những ngày trước đã xem gì, truy cập vào những trang nào
++ Cú pháp: 
+window.history;
+// hoặc
+history;
+- Xem lịch sử lướt web
++ history.length: đếm tổng số trang đã lưu trong history
++ history.back(): trở lại trang trước
++ history.forward(): đi tới trang kế tiếp
++ history.go(number): đi tới một trang
+     -Nếu number âm thì tính từ trạng hiện tại trừ đi number
+     -Nếu number dương thì tính từ trang hiện tại cộng với number
+🫵BOM Navigator
+- Khái niệm:
++ Dùng để kiểm tra các thông tin về người dùng như trình duyệt đang sử dụng là gì? Hệ điều hành đang sử dụng là gì? Trình duyệt có bật cookie hay không? Có thể kiểm tra được tên và phiên bản của trình duyệt 
++ Cú pháp:
+window.navigator;
+// hoặc
+navigator;
+- Một số thuộc tính:
++ navigator.cookieEnabled : Để kiểm tra trình duyệt có bật Cookie hay không
++ navigator.appName : Để kiểm tra tên trình duyệt
++ navigator.appCodeName : Để kiểm tra tên mã code của trình duyệt
++ navigator.appVersion : Để kiểm tra Version của trình duyệt
++ navigator.platform : Xem hệ điều hành mà người dùng đang sử dụng
++ navigator.language : Để kiểm tra ngôn ngữ của trình duyệt
+🫵BOM Popup
+- alert(“Nội dung”);
+- confirm(“Nội dung”);
+- prompt(“Nội dung”,“Nội dung mặc định”);
+🫵BOM Timing
+- setTimeout(function, milliseconds)
+- setInterval(function, milliseconds)
+🫵Cookies
+* Khái niệm:
+- Là dữ liệu được lưu trữ trọng một file text và nằm trong máy tính, nên việc lưu trữ cookie sẽ là vĩnh viễn hoặc là một thời gian cụ thể, tất cả đều do bạn thiết lập
+- Khi trình duyệt gửi thông tin lên server thì cookies sẽ được gửi kèm theo. Đây cũng là thông tin để trả lời cho câu hỏi tại sao Cookie được lưu trữ ở Client mà trên Server vẫn đọc được 
+- Được lưu trữ ở dạng name = value
+- Mục đích tương tự khai báo biến, nhưng khác ở chỗ:
++ Biến thông thường khi load lại trang sẽ mất
++ Biến lưu trong cookie sẽ tồn tại trong một khoảng thời gian do bạn tự thiết lập
+* Các thao tác với Cookie
+- Tạo cookie
++ Cú pháp: document.cookie = 'name=value';
++ Để thiết lập thời gian sống cho cookie thì ta sử dụng từ khóa expires. Định dạng thời gian là UTC 
+- Lấy giá trị cookie
++ Cú pháp: var giaTri = document.cookie;
++ Lúc này kết quả sẽ trả về một chuỗi Cookie có cấu trúc name=value, trường hợp bạn lưu nhiều cookie thì nó sẽ có dạng name1=value1; name2=value2
+- Đổi giá trị cho cookie
++ Để thay đổi giá trị cho Cookie thì bạn chỉ việc gán lại giá trị cho cookie. Không sinh ra cookie mới mà sẽ ghi đè lên cookie cũ
++ Cú pháp: document.cookie = 'name=value';
+- Xoá cookie
++ Chỉ cần xét lại giá trị ngày hết hạn expires về những thời gian trước đây
++ Cú pháp: document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC";

@@ -1,0 +1,81 @@
+28tech—Javascript cơ bản (Tiết 5)
+🎗️Khái niệm DOM
+* DOM là gì?
+- DOM là viết tắt của chữ Document Object Model, dịch ra là mô hình các đối tượng trong tài liệu HTML
+- Thông qua mô hình DOM ta có thể truy xuất đến các thẻ HTML một cách dễ dàng
+- Gồm 3 thành phần: Element, Attribute, Text
+* Nhiệm vụ của DOM Javascript
+- Lấy ra các thẻ HTML
+- Thay đổi các thuộc tính của thẻ HTML
+- Thay đổi CSS của các thẻ HTML
+- Tạo, xoá, thêm các thẻ HTML
+* Các loại DOM trong Javascript
++ DOM document: Có nhiệm vụ lưu trữ toàn bộ các thành phần trong tài liệu của website
++ DOM element: Có nhiệm vụ truy xuất tới thẻ HTML nào đó thông qua các thuộc tính như tên class, id, name của thẻ HTML
++ DOM HTML: Có nhiệm vụ thay đổi giá trị nội dung và thuộc tính của các thẻ HTML
++ DOM CSS: Có nhiệm vụ thay đổi các định dạng CSS của thẻ HTML
++ DOM Event: Có nhiệm vụ gán các sự kiện như onclick(), onload() vào các thẻ HTML
++ DOM Listener: Có nhiệm vụ lắng nghe các sự kiện tác động lên thẻ HTML đó
++ DOM Navigation: dùng để quản lý, thao tác với các thẻ HTML ,thể hiện mối quan hệ cha-con của các thẻ HTML
++ DOM Nodes: Có nhiệm vụ thao tác với HTML thông qua đối tượng (Object)
+🎗️DOM Element
+- getElementById
++ Để lấy ra một thẻ HTML theo id
++ Kết quả sẽ trả về 1 phần tử
++ Cú pháp: var element = document.getElementById('idName');
++ Ví dụ: 
+var element = document.getElementById("idTest");
+element.classList.add("class-test");
+- getElementsByTagName
++ Để lấy ra một thẻ HTML theo tên thẻ. Tên thẻ HTML chính là các thẻ như p, a, div,...
++ Kết quả sẽ trả về 1 mảng các object
++ Cú pháp: var element = document.getElementsByTagName('tagName');
++ Ví dụ:
+var element = document.getElementsByTagName("p");
+element[0].classList.add("class-test");
+- getElementsByClassName
++ Để lấy ra một thẻ HTML theo class
++ Kết quả sẽ trả về 1 mảng các object
++ Cú pháp: var element = document.getElementsByClassName('className');
++ Ví dụ:
+var element = document.getElementsByClassName("p");
+element[0].classList.add("class-test");
+- querySelector
++ Để lấy ra một thẻ HTML theo trọn bộ trong CSS
++ Kết quả sẽ trả về 1 phần tử
++ Cú pháp: var element = document.querySelector('selector');
++ Ví dụ:
+var element = document.querySelector('ul li a');
+element.classList.add("class-test");
+- querySelectorAll
++ Để lấy ra các thẻ HTML theo bộ trọn trong CSS
++ Kết quả sẽ trả về 1 mảng các object
++ Cú pháp: var element = document.querySelectorAll('selector');
++ Ví dụ:
+var element = document.querySelectorAll('ul li a');
+element[0].classList.add("class-test");
+🎗️DOM HTML
+* Nội dung trong thẻ HTML
+- Lấy nội dung: Để lấy nội dung của một element dùng innerHTML
+<h2>Nội dung hiện tại</h2>
+document.querySelector("h2").innerHTML;
+- Thay đổi nội dung: Để thay đổi nội dung của một element dùng innerHTML và gán lại giá trị
+document.querySelector("h2").innerHTML = "Nội dung mới";
+* Thuộc tính thẻ HTML
+- Lấy giá trị của thuộc tính: Để lấy giá trị của thuộc tính HTML sử dụng getAttribute()
+<h2>Nội dung hiện tại</h2>
+document.querySelector("h2").attributeName;
+hoặc:
+document.querySelector("h2").getAttribute("attributeName");
+- Thay đổi giá trị của thuộc tính: Để thay đổi giá trị của thuộc tính HTML sử dụng setAttribute()
+document.querySelector("h2").attributeName = "Nội dung mới";
+hoặc:
+document.querySelector("h2").setAttribute("attributeName", "Nội dung mới");
+🎗️DOM CSS
+- Cú pháp thiết lập giá trị:
+document.getElementById("idName").style.propertyName = 'value';
+- Cú pháp lấy giá trị:
+document.getElementById("idName").style.propertyName;
+☠️Lưu ý:
++ Trường hợp tên thuộc tính có dấu gạch ngang thì viết theo kiểu camelCase (nghĩa là bỏ đi dấu gạch ngang và viết hoa ký tự đầu tiên của chữ thứ hai)
++ Ví dụ: font-size->fontSize

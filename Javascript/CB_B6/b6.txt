@@ -1,0 +1,74 @@
+28tech—Javascript cơ bản (Tiết 6)
+🎗️DOM Events
+- Dom Event (sự kiện) là một tác động nào đó lên các đối tượng HTML
+- Qua đó ta có thể bắt được sự kiện và viết một đoạn Javascript để thực thi một chương trình nào đó
+- Cú pháp:
+element.eventname = function () {
+       // code
+}
+Trong đó:
++ element: là phần tử muốn bắt sự kiện
++ eventname: tên sự kiện
+- Danh sách một số DOM Events phổ biến
++ onload: Khi trình duyệt đã load xong mọi thứ (image, js, css) thì những đoạn code nằm bên trong đó mới được chạy 
++ onblur: Kích hoạt khi một phần tử mất trọng tâm (không được focus vào nữa)
++ onfocus: Kích hoạt khi một phần tử hiển thị đúng trọng tâm (được focus vào)
++ onkeydown: Kích hoạt khi một phím được nhấn
++ onkeyup: Kích hoạt khi một phím được nhả ra
++ onclick: Kích hoạt trên con chuột vừa nhấn vào phần tử
++ onchange: Kích hoạt khi giá trị được thay đổi khác đi so với giá trị trước đó 
+🎗️DOM Events Listener
+- DOM Events Listener giống DOM Events nhưng khác ở chỗ:
++ Một element có thể gọi được nhiều sự kiện 
++ Có thể huỷ bỏ lắng nghe sự kiện bất kỳ (DOM Events chỉ lắng nghe được nhưng không huỷ bỏ lắng nghe được)
++ Cú pháp:
+element.addElementListener(“eventname”, function (e) {
+       // code
+});
+Trong đó:
+-element: là phần tử muốn bắt sự kiện
+-eventname: Tên sự kiện (bỏ chữ on, Ví dụ: onclick->click)
+🎗️DOM Navigation
+- Dùng để quản lý, thao tác với các thẻ HTML, thể hiện mối quan hệ cha-con của các thẻ HTML
+- Các thuộc tính:
++ parentNode: Truy cập phần tử cha của nút được chỉ định trong cây DOM
++ childNodes: Truy cập vào tất cả các node con của một phần tử nhất định. Node con có thể là một văn bản, chú thích,...
++ firstElementChild: Trả về phần tử là node con đầu tiên của phần tử cha
++ lastElementChild: Trả về phần tử là node con cuối cùng của phần tử cha
++ nextElementSibling: Trả về phần tử là node kế tiếp
++ previousElementSibling: Trả về phần tử là node trước đó
++ nodeName: Trả về tên một node
+🎗️DOM Nodes
+- document.createElement()
++ Tạo ra một Node mới hoàn toàn và không liên quan tới những thẻ HTML đang hiển thị trên website
++ Cú pháp: var tenBien = document.createElement("tagName");
+Trong đó: tagName là tên thẻ (p, h1, div,…)
+- document.createTextNode()
++ Text node là một node đặc biệt, nó không phải là một thẻ HTML thông thường mà chỉ là một chuỗi string
++ Cú pháp: var tenBien = document.createTextNode("Nội dung…");
+- appendChild()
++ Dùng để thêm (bổ sung) vào vị trí cuối dùng của đối tượng một thẻ HTML nào đó 
++ Cú pháp: element_parent.appendChild(node_insert);
+Trong đó: 
+.element_parent: là phần tử cha
+.node_insert: là node bạn muốn thêm vào
+- insertBefore()
++ Dùng để thêm một Node vào đằng trước một node con nào đó
++ Cú pháp: element_parent.insertBefore(node_insert, node_child);
+Trong đó:
+.element_parent: là phần tử cha
+.node_insert: là node bạn muốn thêm vào
+.node_child: là node con mà bạn muốn thêm node_insert vào đằng trước nó
+- removeChild()
++ Dùng để xoá một node con ra khỏi node hiện tại
++ Cú pháp: element_parent.removeChild(node_remove);
+Trong đó:
+.element_parent: là phần tử cha
+.node_remove: là node cần xoá
+- replaceChild()
++ Dùng để thay thế một node con nào đó bằng một node khác mới hoàn toàn
++ Cú pháp: element_parent.replaceChild(node_insert, node_remove);
+Trong đó:
+.element_parent: là phần tử cha
+.node_insert: là element mới muốn thay thế
+.node_remove: là element cũ muốn bỏ đi

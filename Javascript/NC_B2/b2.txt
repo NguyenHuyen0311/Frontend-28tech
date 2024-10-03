@@ -1,0 +1,119 @@
+28tech—Javascript nâng cao (Tiết 2)
+🖇️Callbacks
+* Callbacks
+- Hàm callback (gọi lại) là một hàm được truyền vào đối số của một hàm khác 
+- Hàm callback có thể được chạy sau khi những chức năng khác kết thúc
+🖇️Promise
+- Promise dùng để giải quyết vấn đề callback hell
+- Callback hell là có nhiều hàm lồng nhau gây ra khó chịu, nguyên nhân gây ra tình trạng callback hell là do: giả sử để chạy được hàm b thì hàm a phải thực thi xong đã, và để chạy được hàm c thì hàm b phải thực thi xong
+- Promise có cách viết đơn giản và dễ nhìn hơn so với callback, mỗi hàm nằm trên một dòng nên sẽ dễ nhìn hơn 
+- Cú pháp:
+var promise = new Promise((resolve, reject) => {
+   // resolve(): Nếu thành công chạy vào hàm này
+   // reject(): Nếu thất bại chạy vào hàm này
+});
+
+promise
+   .then((success) => {
+      // Nếu thành công chạy vào đây
+   })
+   .catch((error) => {
+      // Nếu thất bại chạy vào đây
+   })
+   .finally(() => {
+      // Luôn luôn chạy vào đây
+   })
+Trong đó: 
++ new Promise: để tạo mới một promise
++ resolve: là một hàm callback xử lý cho hành động thành công
++ reject: là một hàm callback xử lý cho hành động thất bại
++ .then: Nếu thành công chạy vào đây
++ .catch: Nếu thất bại chạy vào đây
++ .finally: Luôn luôn chạy vào đây
+* Promise có 3 trạng thái:
+- Pending:
++ Khi promise đang chạy thì sẽ ở trạng thái này
++ Kết quả là undefined
+- Fulfilled:
++ Khi promise đã chạy xong thì sẽ ở trạng thái này
++ Kết quả là một giá trị
+- Rejected:
++ Khi promise bị lỗi thì sẽ ở trạng thái này
++ Kết quả là một object lỗi
+* Sử dụng Promise.all
+- Promise.all giúp cho các promise được thực thi song song nhau, tổng thời gian chạy của chương trình chỉ bằng thời gian chạy của promise chạy lâu nhất
+- Cú pháp:
+Promise.all([promise1, promise2, ...])
+   .then(([success1, success2, ...]) => {
+      // Nếu tất cả promise thành công thì chạy vào đây
+   })  
+   .catch((error) => {
+      // Chỉ cần một promise lỗi thì sẽ chạy vào đây
+   })  
+   .finally(() => {
+      // Luôn chạy vào đây
+   })  
+- Lưu ý: Nếu một trong số các promise bị reject thì chương trình chạy vào catch ngay
+- Một vài ứng dụng của Promise.all
++ Gửi nhiều email đồng thời: Cách thông thường là dùng vòng lặp để lặp qua từng email xong gửi đi, nhưng giờ dùng promise.all thì sẽ gửi đi song song các email
++ Lấy nhiều api: giả sử muốn lấy nhiều api và các api độc lập nhau thì dùng promise.all sẽ giảm được thời gian 
+🖇️Fetch API
+- Phương thức Fetch dùng để gọi lên trên server thông qua một API để lấy dữ liệu từ trên server trả về
+- Api hiểu đơn giản thì nó là một url để cho phép bên Front-end có thể giao tiếp được với Back-end
+- Cú pháp:
+fetch('http://example.com/movies.json')
+.then((response) => {
+    return response.json();
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => {
+    console.log(error);
+})
+Trong đó:
++ Phương thức fetch() dùng để gửi yêu cầu lên server thông qua api 
++ Phương thức then() được thực thi khi có phản hồi từ máy chủ trả về 
++ Phương thức catch() được thực thi khi không có phản hồi từ máy chủ 
+- 3 bước để lấy data 
++ Bước 1: Truy cập vào api 
++ Bước 2: Lấy data
++ Bước 3: In data ra màn hình 
+🖇️Async/Await
+- Async/Await là một tính năng của Javascript giúp chúng ta làm việc với các hàm bất đồng bộ theo cách dễ hiểu hơn
+- Nó được xây dựng trên Promise
+- Async: Khai báo một hàm bất đồng bộ
++ Tự động biến đổi một hàm thông thường thành một Promise
++ Từ khoá Async được đặt trước một hàm
+- Await: Tạm dừng việc thực hiện các hàm async
++ Khi được đặt trước một Promise, nó sẽ đợi cho đến khi Promise kết thúc và trả về kết quả
++ Await chỉ có thể được sử dụng bên trong các hàm async
+🖇️JSON server và Postman
+* JSON server
+- Khái niệm: JSON server là một server để fake API và trả chuỗi JSON
+- Yêu cầu: Cài đặt Nodejs vào máy tính, gõ npm -v để xem phiên bản
+- Hướng dẫn cấu hình:
++ Bước 1: Gõ lệnh npm init để khởi tạo file package.json (Chứa những thông tin các gói đã cài đặt, nếu có file package.json rồi thì thôi, nếu không cứ bấm enter)
++ Bước 2: Gõ lệnh npm i json-server để cài
++ Bước 3: Tạo một file database.json
++ Bước 4: Thêm vào mục script trong package.json dòng lệnh: "start": "json-server --watch database.json"
++ Bước 5: Gõ lệnh npm start để chạy
+* Postman
+- Các bước cài đặt và dử dụng Postman:
++ Bước 1: Tải Postman và đăng ký tài khoản
++ Bước 2: Chọn Create Workspace
++ Bước 3: Chọn Create Collection và đặt tên cho Collection
++ Bước 4: Tạo mới một Request
+- Phương thức GET
++ Để lấy một hoặc nhiều bản ghi
+- Phương thức POST
++ Để tạo mới một bản ghi
++ Trường hợp data gửi lên dạng json thì headers phải thêm Content-Type là application/json
+- Phương thức PUT
++ Để cập nhật một bản ghi
++ Nhưng phải gửi lên đầy đủ các cặp key/value (kể cả những cặp key/value không cần cập nhật)
+- Phương thức PATCH 
++ Để cập nhật một bản ghi
++ Chỉ cần gửi lên các cặp key/value cần cập nhật
+- Phương thức DELETE
++ Để xoá một bản ghi

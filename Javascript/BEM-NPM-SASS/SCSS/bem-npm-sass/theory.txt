@@ -1,0 +1,129 @@
+28tech—BEM, NPM, SASS/SCSS 
+🛎️BEM
+- BEM viết tắt của cụm Block - Element - Modifier
+- Là tiêu chuẩn quy ước đặt tên cho các tên lớp CSS 
+- BEM giúp việc lập trình Frontend dễ hiểu, dễ đọc hơn, dễ làm việc và dễ mở rộng cũng như bảo trì khi làm việc với CSS 
+- Quy ước đặt tên: block__element--modifier
++ Block: Là một khối độc lập của một nhóm, và cũng có thể dùng lại như một component (một khối có thể tái sử dụng). Nó cần ngắn gọn, dễ hiểu, bao quát, không cụ thể để có khả năng dùng lại cao nhất. Ví dụ: card, post...
++ Element: Là một phần tử con bên trong block, và chỉ tồn tại bên trong Block. Ví dụ như: card__title, card__text...
++ Modifier: Dùng để quy định kích thước, màu sắc, hình dạng khác nhau của một block hay element. Ví dụ như card__button--green, card__button--small...
+🛎️NPM
+- NPM viết tắt của Node Package Manager 
+- Là một công cụ tạo và quản lý các thư viện lập trình Javascript cho Node.js 
+- Trường hợp không sử dụng NPM, bạn sẽ cần tải toàn bộ các thư viện vào chính dự án của mình. Điều này làm mất nhiều thời gian hơn để hoàn thành. Còn khi áp dụng NPM, bạn chỉ cần 1 dòng lệnh hoàn tất công việc lưu thư viện
+- Link website: https://www.npmjs.com/
+- Cài đặt và sử dụng npm lần đầu cho một dự án mới 
++ Bước 1: Gõ lệnh npm -v trên cmd để kiểm tra xem cài đặt thành công chưa (Npm được tích hợp sẵn trong nodejs, nên chỉ cần cài đặt nodejs là được, nếu chưa cài đặt thì vào trong https://nodejs.org/en/)
++ Bước 2: Gõ lệnh npm init, sau đó cứ bấm enter đến hết
+    .Nếu là project mới cần chạy câu lệnh này. Câu lệnh này sẽ tạo ra 1 file có tên là package.json - file này để lưu trữ thông tin (tên package, phiên bản, các dependencies) mà project của bạn sử dụng
++ Bước 3: Gõ lệnh npm install [tên package] hoặc npm i [tên package] để cài đặt package vào dự án
+- Một số thuộc tính trong package.json 
++ name: tên gói thư viện
++ version: phiên bản gói 
++ description: phần mô tả về gói thư viện
++ homepage: trang chủ của gói
++ author: tác giả
++ contributors: tên người đóng góp cho package
++ dependencies: danh sách các gói phụ thuộc, tự động được cài theo
++ repository: loại repository và url của package, thông thường là link git
++ main: index.js (file chính của dự án)
++ keywords: các từ khoá
+- Một số câu lệnh npm khác
++ npm update [tên_package]: Để update một package. Hạn chế dùng, chỉ dùng khi thực sự hiểu về package bạn đang muốn update
++ npm uninstall [tên_package]: Gỡ cài đặt package
+🛎️SASS/SCSS 
+* Khái niệm 
+- SASS viết tắt của Syntactively Awesome Style Sheets
+- Là ngôn ngữ kịch bản và bộ tiền xử lý CSS 
+- Biên dịch mã thành CSS để giúp bạn viết CSS nhanh hơn, tái sử dụng được, tối ưu hơn 
+- SCSS (Sassy CSS) được giới thiệu trong phiên bản thứ 3 của SASS, nó bổ sung thêm dấu ngoặc {} và dấu chấm phẩy ;
+- Xem sự khác biệt tại đây: https://sass-lang.com/guide
+* Hướng dẫn cài đặt 
+- Bước 1: Mở terminal lên và gõ lệnh "npm install -g sass" hoặc "npm install sass" để cài đặt sass vào project
+- Bước 2: Tạo 2 folder là scss và css. Trong folder scss tạo file style.scss 
+- Bước 3: Chạy lệnh "sass./scss/style.scss./css/style.css --watch" để biên dịch file style.scss thành file style.css. Hoặc chạy lệnh "sass --watch scss:css" để biên dịch tất cả các file trong folder scss vào trong folder css 
+- Bước 4 (Nếu lỗi): Nếu gặp lỗi cannot be loaded because running scripts is disabled on this system thì chạy lên sau ở phần mềm Windows PowerShell: "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser". Sau đó chạy lại bước 3
+* @extend - kế thừa thuộc tính 
+- @extend được dùng trong trường hợp bạn muốn một selector sử dụng lại những thuộc tính của selector khác 
+- Giúp giảm trùng lặp code 
+- Sử dụng trong trường hợp styles tĩnh
+* Placeholder
+- Dùng để kết hợp với extend để bỏ đi những phần select không cần thiết khi biên dịch (Thêm dấu % ở trước)
+* Biến (variable) - khai báo và xử lý biến 
+- Cú pháp: $name: value;
+- Trong đó:
++ $name: tên biến 
++ value: giá trị của biến 
+* Nesting - cách viết phân cấp 
+- Là cấu trúc viết gọn theo dạng phân cấp, giúp dễ dàng kiểm soát phần tử con thuộc phần tử cha nào 
+* @mixin & @include - khai báo và kế thừa kết hợp đối số
+- @mixin 
++ Tương tự @extend nhưng @mixin có thể truyền đối số vào được
++ Sử dụng trong trường hợp styles động, để truyền tham số vào 
++ Cú pháp: 
+@mixin mixin_name(danh_sach_tham_so) {
+    // Code 
+}
+- @include 
++ Dùng để gọi @mixin
++ Cú pháp: @include mixin_name;
+* Câu lệnh @if @else
+- Cú pháp:
+@if ($dieukien1) {
+    // code
+}
+@else if ($dieukien2) {
+    // code 
+}
+@else {
+    // code
+}
+* Vòng lặp @for
+- Cú pháp:
+@for $i from $begin_value through $end_value {
+    // Code
+    // Để lấy giá trị $i thì ta sử dụng cú pháp #{$i}
+} 
+* Toán tử (operator) 
+- Toán tử gán
++ Cú pháp: $ten-bien: gia-tri;
+- Toán tử số học: +, -, *, /, %
+- Toán tử so sánh
++ "==": So sánh bằng. Trả về TRUE nếu vế trái bằng vế phải và ngược lại sẽ trả về FALSE nếu vế trái khác vế phải
++ "!=": So sánh không bằng. Trả về TRUE nếu vế trái khác vế phải và ngược lại sẽ trả về FALSE nếu vế trái bằng vế phải
++ ">": So sánh lớn hơn
++ ">=": So sánh lớn hơn hoặc bằng
++ "<": So sánh bé hơn 
++ "<=": So sánh bé hơn hoặc bằng
+- Toán tử logic
++ and (X and Y): Trả về TRUE nếu X và Y đều TRUE 
++ or (X or Y):  Trả về TRUE nếu một trong hai X hoặc Y đúng hoặc cả hai đều TRUE 
++ not (not X): Trả về TRUE nếu X khác TRUE 
+* Vòng lặp @while
+- Cú pháp:
+@while condition {
+    // Code 
+}
+* Vòng lặp @each
+- Dùng để lặp qua một list (Tương tự trong Javascript là lặp qua một mảng)
+- Cú pháp: 
+$list: item1, item2, item3,...;
+@each $item in $list {
+    // Code 
+}
+* @function
+- Hàm trong SCSS luôn trả về một giá trị 
+- Trong @function phải có @return 
+- Cú pháp khai báo:
+@function function_name($var1, $var2,...) {
+    @return value;
+}
+- Cú pháp gọi hàm:
+function_name($val1, $val2,...)
+* @import - kết hợp các file SCSS 
+- Cú pháp đặt tên file: _tenFile.scss 
+- Cú pháp import file: @import "tenFile";
+(Đặt tên file sẽ có dạng dấu gạch gưới ở trước tên file _name.scss). Khi biên dịch thì file có dấu gạch _ sẽ không được biên dịch
+🛎️Giao bài project mini 4
+- Code lại project mini 2 (hoặc 1 website bất kỳ bạn thích) nhưng đặt tên class chuẩn BEM và viết SCSS thay vì viết CSS 
+- Link giao diện: https://templatemo.com/templates/templatemo_535_softy_pinko/

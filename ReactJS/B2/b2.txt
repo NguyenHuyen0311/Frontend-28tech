@@ -1,0 +1,51 @@
+28tech—Học ReactJS (Tiết 2)
+🛎️JSX
+- JSX là viết tắt của từ Javascript XML
+- Nó cho phép bạn viết các đoạn mã HTML trong ReactJS một cách dễ dàng và có cấu trúc hơn
+- Một số khác biệt giữa HTML và JSX:
+       Mô tả                                Cấu trúc HTML                        Cấu trúc JSX
+Tên Class                            <tag class="">                         <tag className="">
+Thuộc tính value <input />           <input value="" />                     <input defaultValue="" />
+Thuộc tính for của <label>           <label for="">                         <label htmlFor="">
+Giá trị của <select><option>         <option value="">                      <option value={}>
+Style trực tiếp bên trong tag        <tag style="width: 10%">               <tag style={{width: '10%'}}>
+Event                                <tag onclick="functionName()">         <tag onClick={functionName}>
+Khi gọi một biến                                                            <img src={path}>
+                                                                            Hello {name}!
+* Lưu ý:
+- Trong JSX chỉ viết được 1 element cha bọc ở bên ngoài
+- Để viết được 2 element cha thì chúng ta dùng cú pháp Fragment
+- Cú pháp: <></>
+🛎️Components
+- Components (Thành phần) giúp phân chia các UI (giao diện người dùng) thành các phần nhỏ để dễ quản lý và tái sử dụng
+- Ví dụ: header, footer, sidebar,...
+- Các bước tạo 1 component trong ReactJS
++ Bước 1: Trong folder src tạo một folder mới tên là components 
++ Bước 2: Trong folder components tạo một folder mới đặt tên theo đúng ý nghĩa của khối đó. Ví dụ header đặt tên folder là Header  
++ Bước 3: Tạo 1 file mới đặt tên là index.js. Sau đó viết 1 function tên là Header và export default 
++ Bước 4: Import vào file nào mà bạn muốn sử dụng component đó 
+🛎️Props
+- Props là một object được truyền vào trong một component
+- Props cho phép chúng ta giao tiếp giữa các components với nhau bằng cách truyền tham số qua lại giữa các components
+- Khi một components cha truyền cho component con một props thì components con chỉ có thể đọc và không có quyền chỉnh sửa nó bên phía components cha 
+- Cách truyền một props cũng giống như cách mà bạn thêm một attributes cho một element HTML 
+- Props có thể nhận giá trị là tất cả các kiểu dữ liệu:
++ Kiểu dữ liệu nguyên thủy: String, Number, Boolean, Undefined, Null, Symbol
++ Kiểu dữ liệu phức tạp: Function, Object (Object, Array)  
+🛎️Hướng dẫn chèn icon
+- Cài đặt thêm package (gói): https://www.npmjs.com/package/react-icons
+- Sử dụng câu lệnh: npm i react-icons
+- Link trang chủ: https://react-icons.github.io/react-icons 
+- Cách chèn icon vào React 
++ Bước 1: Import icon vào file như sau: 
+import {IoSearchOutline} from "react-icons/io5"; 
++ Bước 2: Chèn icon vào đoạn code muốn hiển thị: <IoSearchOutline />
+🛎️Events (Sự kiện)
+- Xử lý các sự kiện trong React rất giống với xử lý các sự kiện trong Javascript, nhưng có một số khác biệt về cú pháp
+- Các sự kiện trong React được đặt tên bằng camelCase, thay vì chữ thường
+- Một số sự kiện phổ biến trong ReactJS:
++ onClick
++ onChange
++ onSubmit
++ onFocus
++ onBlur

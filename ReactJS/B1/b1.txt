@@ -1,0 +1,104 @@
+28tech—Học ReactJS (Tiết 1)
+🛎️Multiple Page Application và Single Page Application
+* Multiple Page Application là gì?
+- MPA là kiểu website hoạt động theo cách truyền thống, khi người dùng yêu cầu một trang web, thì server sẽ tính toán và trả về trang web đó cho người dùng toàn bộ trang web dưới dạng mã html và web đó sẽ được load lại mới hoàn toàn
+- Ví dụ: shopee.vn, tiki.vn, sendo.vn,...
+* Single Page Application
+- SPA là một trang web mà ở đó người dùng có thể truy cập nhiều trang con mà không ảnh hưởng gì đến trang gốc. Khi người dùng truy cập vào thành phần bất kỳ trên trang, SPA sẽ chỉ chạy nội dung trên thành phần đó mà không tải lại toàn bộ trang như web truyền thống 
+- Ví dụ: youtube.com, facebook.com, gmail.com,...
+🛎️Khái niệm ReactJS 
+- ReactJS là một mã nguồn mở được phát triển bởi Facebook, ra mắt vào năm 2013
+- ReactJS là một thư viện viết bằng Javascript, dùng để xây dựng giao diện người dùng (UI)
+- Giúp bạn xây dựng trang web SPA (Single Page Application) một cách nhanh chóng 
+- Mức độ phổ biến của ReactJS: https://trends.google.com/trends/?geo=VN
+🛎️Hướng dẫn cài đặt 
+- Bước 1: Cài đặt Node.js trước. Chỉ cần cài 1 lần duy nhất, nếu máy tính đã cài rồi thì không cần cài nữa
+- Bước 2: Gõ lệnh npm install -g create-react-app. Chỉ cần cài 1 lần duy nhất. Create-react-app là cách để đơn giản hóa quá trình cài đặt và cấu hình môi trường
+- Bước 3: Gõ lệnh npx create-react-app ten-du-an để tạo mới một dự án ReactJS
+- Bước 4: Gõ lệnh cd ten-du-an để đi vào thư mục dự án
+- Bước 5: Gõ lệnh npm start để khởi chạy dự án 
+🛎️Giải thích cấu trúc thư mục và ý nghĩa các file 
+- node_modules: chứa các thư viện được cài đặt cho dự án, tất cả cài đặt sẽ được lưu tại đây, chúng ta không thao tác trong thư mục này 
+- public: chứa tất cả file output, là các file sẽ tương tác trực tiếp với trình duyệt như HTML, image,...
+- src: chứa tất cả các file input, đây là các file mà chúng ta sẽ quan tâm nhất, thao tác phần lớn ở những file này, gồm các file Javascript, CSS,...
+- package.json: file này để lưu trữ thông tin (tên package, phiên bản, các dependencies) mà project của bạn sử dụng 
+- README.md: file này để mô tả dự án, hướng dẫn cài đặt dự án do chính bạn tự viết ra. Tìm hiểu cú pháp viết file Markdown tại https://www.markdownguide.org/basic-syntax/
+🛎️Cách ReactJS render nội dung HTML ra trình duyệt 
+- Để hiểu rõ hơn về render trong React, ta xem nội dung 3 file:
++ /public/index.html 
+• File này không chứa bất kỳ nội dung nào hiển thị ngoài trình duyệt 
+• Trong file này ta chỉ cần quan tâm đến dòng <div id="root"></div>, tất cả HTML sau này được render vào trong id="root" này
++ /src/App.js 
+• Đoạn code bên trong return chính là nội dung được hiển thị bên ngoài trình duyệt 
+• File này liên kết với /public/index.html thông qua /src/index.js 
+• Mở trình duyệt lên và bật F12 lên để xem nội dung HTML, code trong file App.js đã được render vào trong id="root"
++ /src/index.js 
+• Chúng ta quan tâm đến các đoạn code sau: 
+import App from './App';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+• Nội dung trên có nghĩa là file /src/index.js lấy nội dung từ function App của file /src/App.js render ra nội dung trả về id="root" của file /public/index.html, sau đó hiển thị nội dung này ra trình duyệt
+🛎️Ôn tập một số lý thuyết Javascript (Hay dùng trong ReactJS)
+* Variables (Biến)
+- Có 3 cách khai báo giá trị cho một biến: var, let, const 
++ Khai báo giá trị với var
+• Khai báo toàn cục: Sử dụng được trong toàn bộ chương trình
+• Khai báo cục bộ: Nếu khai báo trong hàm thì chỉ sử dụng được ở trong hàm 
++ Khai báo giá trị với let 
+• let sử dụng như var, tuy nhiên có tác dụng phạm vi bên trong một khối (như bên trong câu điều kiện if, vòng lặp for,...)
++ Khai báo giá trị với const 
+• const chỉ mang duy nhất một giá trị, nếu giá trị thay đổi sẽ báo lỗi 
+* Default parameters (Tham số mặc định)
+- Tham số mặc định cho phép các tham số mang giá trị mặc định nếu tham số không có giá trị hoặc giá trị không xác định (undefined)
+- Hoặc có thể hiểu tham số mặc định là tham số ban đầu được gán cho function
+- Có 2 cách khai báo tham số mặc định: gán mặc định tại vị trí khai báo và gán bên trong function
+* Spread syntax 
+- Spread syntax (Cú pháp trải ra) là một phép lặp lại các phần tử của mảng (array) hoặc đối tượng (object)
+- Được thể hiện dưới dạng dấu ba chấm: ...
+* Rest parameters
+- Rest parameters (Tham số "còn lại") là tham số đại diện cho những tham số không được khai báo của một function
+- Khi sử dụng khai báo đại diện bên trong một function thì khi gọi function sẽ không giới hạn giá trị truyền vào 
+- Được kí hiệu bằng khai báo ...name (cẩn thận nhầm với spread syntax - dùng trong array và object)
+* Destructuring 
+- Destructuring (phá vỡ cấu trúc) cho phép chúng ta dễ dàng sử dụng các giá trị phần tử của Array hoặc Object (Mỗi lần lấy giá trị sẽ ngắn hơn)
+* Arrow function
+- Cú pháp:
+var functionName = (val1, val2,...) => {
+    /* Code */
+}
+* Export và Import 
+- Cú pháp Export:
+export const functionName = () => {
+    /* Code */
+}
+
+- Cú pháp Import:
+import {functionName} from "./file_export.js";
+Hoặc 
+import * as functionName from "./file_export.js";
+* forEach()
+- forEach() là một phương thức có sẵn của array, để duyệt qua mỗi phần tử của mảng và thực hiện một hành động nào đó 
+- forEach() không tạo ra mảng mới, chỉ có thể sửa mảng hiện tại
+- Cú pháp: 
+arr.forEach(function(currentValue, index, array) {
+    // Code 
+});
+- Trong đó: 
++ currentValue: phần tử hiện tại đang được xử lý của array
++ index: chỉ số của phần tử hiện tại đang được xử lý của array
++ array: mảng hiện tại đang gọi hàm forEach()
+* map()
+- map() sẽ duyệt qua từng phần tử của mảng. Giá trị trả về của hàm map là một mảng mới, với số lượng phần tử bằng với mảng cũ, nhưng giá trị của các phần tử thì được quyết định bởi lệnh return của hàm map()
+- Cú pháp:
+arr.map(function(currentValue, index, array) {
+    // Code 
+});
+- Trong đó: 
++ currentValue: phần tử hiện tại đang được xử lý của array
++ index: chỉ số của phần tử hiện tại đang được xử lý của array
++ array: mảng hiện tại đang gọi hàm map()
+

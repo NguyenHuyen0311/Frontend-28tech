@@ -1,0 +1,47 @@
+28tech—Học ReactJS (Tiết 3)
+🛎️Conditional Rendering (Render với điều kiện)
+- Trong React, ta có thể tạo nhiều component khác nhau, khi đó có thể render bất kỳ component nào ta muốn, bằng cách sử dụng điều kiện tại phần render
+- Cách sử dụng câu điều kiện (câu điều kiện if else) tại phần render giống như cách sử dụng trong Javascript
+- Ví dụ 1: Tính năng login, logout
+- Ví dụ 2: Cú pháp && 
+🛎️Lists
+- Ví dụ 1: Từ một mảng menu in ra giao diện
+const arrayMenu = [
+    "Trang chủ",
+    "Sản phẩm",
+    "Tin tức",
+    "Giới thiệu",
+    "Liên hệ",
+];
+- Ví dụ 2: Truyền props từ component cha là ProductList/index.js vào component con là ProductItem.js 
+- Ví dụ 3: List dạng lồng nhau. Có một mảng country, sau đấy lặp qua từng phần tử của mảng city và vẽ ra giao diện
+🛎️Sử dụng CSS/SCSS trong ReactJS
+* Sử dụng CSS trong ReactJS
+- Các bước sử dụng CSS trong ReactJS 
++ Bước 1: Tạo 1 file CSS ở cùng cấp với component
++ Bước 2: Nhúng file CSS đó vào trong component bằng cú pháp: import "./TenFile.css";
+- Ví dụ: Lấy ví dụ phần 2 để CSS lại cho đẹp
+* Sử dụng SCSS trong ReactJS
+- Các bước sử dụng SCSS trong ReactJS 
++ Bước 1: Gõ lệnh npm i sass (Link trang NPM: https://www.npmjs.com/package/sass) để cài SASS cho project và chỉ cần cài 1 lần duy nhất cho project
++ Bước 2: Tạo 1 file SCSS ở cùng cấp với component
++ Bước 3: Nhúng file SCSS đó vào trong component bằng cú pháp: import "./TenFile.scss"
+- Ví dụ: Vẫn ví dụ trên nhưng code bằng SCSS
+🛎️Hooks là gì?
+- Hooks (gắn vào, móc vào)
+- Có 2 loại component: class component và function component
+- Trước đây, class component có đầy đủ tính năng còn function component thiếu khá nhiều tính năng, nên người ta thường code theo hướng class component
+- Hooks mới được thêm ở phiên bản React 16.8. Hooks bổ sung thêm những tính năng còn thiếu cho function component để có đầy đủ tính năng giống như class component
+- Chính vì vậy, ngày nay người ta thường code theo hướng function component vì tính năng đã đầy đủ mà cú pháp ngắn hơn, dễ hiểu hơn so với class component
+- Hooks bản chất là những cái hàm được viết sẵn trong ReactJS được sử dụng để code các tính năng khác nhau, để sử dụng được các tính năng này ở trong các component ta cần gắn các hooks này vào trong component
+- Có 10 loại hooks:
++ useState
++ useEffect
++ useContext
++ useRef
++ useCallback
++ useMemo
++ useReducer
++ useLayoutEffect
++ useImperativeHandle
++ useDebugValue

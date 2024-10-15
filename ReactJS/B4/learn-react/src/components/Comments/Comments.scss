@@ -1,0 +1,12 @@
+.comments {
+    &__content {
+        padding: 10px;
+        background-color: rgb(239, 234, 229);
+        border: 1px solid #ddd;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+}

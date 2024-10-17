@@ -1,0 +1,54 @@
+28tech—Học ReactJS (Tiết 5)
+🛎️useContext
+- useContext (bối cảnh) giúp đơn giản hóa việc chuyển dữ liệu từ component cha xuống các component con mà không cần phải sử dụng đến props
+- Tức là chuyển trực tiếp từ component cha xuống các component con mà không cần phải thông qua 1 component gián tiếp
+* Các bước để sử dụng useContext:
+- Bước 1: Tạo ra 1 bối cảnh ở component A (để tạo ra phạm vi và sử dụng được data trong phạm vi đó, ví dụ phạm vi là component A thì tất cả các component con đều sử dụng được)
+    import { createContext } from "react";
+    export const AContext = createContext();
+- Bước 2: Cung cấp bối cảnh để bao bọc toàn bộ các component cần sử dụng data
+function A() {
+    return (
+        <AContext.Provider value={data}>
+            <B />
+        </AContext.Provider>
+    );
+}
+- Bước 3: Sử dụng useContext ở component con để có thể lấy được data từ component cha (Ví dụ component C là con của component B)
+    import { useContext } from "react";
+    import { AContext } from "url_component_A";
+    function C() {
+        const data = useContext(AContext);
+        return (
+            <>
+                {data}
+            </>
+        );
+    }
+🛎️useRef
+- useRef trả về một object với thuộc tính current được khởi tạo thông qua tham số truyền vào
+- Object được trả về không bị khởi tạo lại khi component render lại
+- Giá trị trong object thay đổi nhưng component không bị render lại (useState thay đổi thì làm component render lại)
+- Cú pháp: const tenBien = useRef(initialValue);
+- Trong đó: 
++ initialValue: Là giá trị khởi tạo 
+- useRef được sử dụng để truy cập được các phần tử trong DOM
+🛎️React.memo()
+- React.memo() dùng để ghi nhớ kết quả 
+- React.memo() sẽ không render lại component khi component đó không có gì thay đổi
+- React.memo() là Higher Order Component (Thành phần bậc cao hơn) được sử dụng để bọc các component
+- Cú pháp: 
+    import { memo } from "react";
+    function Component() {
+        return (
+            <></>
+        )
+    }
+    export default memo(Component);
+🛎️useCallback
+- useCallback giúp tránh thực hiện lại một hàm không cần thiết 
+- Giúp tạo ra một vùng nhớ để lưu hàm callback và chỉ tạo ra hàm callback mới khi dependencies thay đổi
+- Cú pháp: const functionName = useCallback(callback, dependency);
+- Trong đó:
++ callback: là một hàm được gọi lại, lần render đầu tiên luôn chạy vào hàm này
++ dependency: là sự phụ thuộc, khi dependency thay đổi thì useCallback mới tạo ra một hàm mới 

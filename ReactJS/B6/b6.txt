@@ -1,0 +1,23 @@
+28tech—Học ReactJS (Tiết 6)
+🛎️useMemo
+- useMemo giúp tránh thực hiện lại một logic không cần thiết
+- useMemo tạo ra một vùng nhớ để lưu trữ giá trị đầu ra và chỉ ghi nhớ giá trị mới khi dependencies thay đổi
+- Cú pháp: const variableName = useMemo(callback, dependency);
+- Trong đó:
++ callback: là một hàm được gọi lại, lần render đầu tiên luôn chạy vào hàm này
++ dependency: là sự phụ thuộc, khi dependency thay đổi thì useMemo cập nhật lại giá trị
+- Sự khác biệt giữa useCallback và useMemo:
++ useCallback lưu vào bộ nhớ một hàm
++ useMemo lưu vào bộ nhớ một giá trị
+🛎️useReducer
+- useReducer giống như một phiên bản nâng cao của useState
+- useReducer được sử dụng trong trường hợp component có state phức tạp
+- Cú pháp: const [state, dispatch] = useReducer(reducer, initialState);
+- Các bước sử dụng useReducer:
++ Bước 1: Khởi tạo useReducer và xác định giá trị khởi tạo 
++ Bước 2: Xây dựng hàm reducer (Như là một hàm chuyển đổi, đầu vào là 2 tham số gồm state và action, đầu ra là new state - state mới)
++ Bước 3: Xác định những Action (Xác định những hành động sẽ xảy ra)
++ Bước 4: Sử dụng Dispatch để kích hoạt một action
+🛎️Hướng dẫn thêm Skeleton
+- Hướng dẫn thêm Skeleton (Bộ khung xương) vào website khi loading dữ liệu
+- Link cài đặt trên NPM: https://www.npmjs.com/package/react-loading-skeleton 

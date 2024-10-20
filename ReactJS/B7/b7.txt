@@ -1,0 +1,10 @@
+28tech—Học ReactJS (Tiết 7)
+🛎️Làm bài tập về Hooks
+* Làm trang quản lý sản phẩm gồm những phần sau
+- Hiển thị danh sách sản phẩm
+- Làm tính năng thêm sản phẩm
+- Làm tính năng xóa sản phẩm
+- Làm tính năng sửa sản phẩm
+* Cài đặt thêm thư viện
+- react-modal (https://www.npmjs.com/package/react-modal)
+- sweetalert2 (https://www.npmjs.com/package/sweetalert2)

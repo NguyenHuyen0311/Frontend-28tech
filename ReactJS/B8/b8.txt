@@ -1,0 +1,29 @@
+28tech—Học Redux trong ReactJS
+🛎️Vấn đề và giải pháp khi chia sẻ data giữa các component
+* Vấn đề
+- Để truyền được data giữa các component ta phải truyền data lên App sau đó mới truyền sang các component khác được. Nếu sau này có nhiều component thì sẽ làm cho App bị rối
+* Giải pháp 
+- Với Redux, data của ứng dụng được lưu trong một nơi gọi là store và mỗi component đều có thể truy cập bất kỳ data nào mà chúng muốn từ store này
+🛎️Khái niệm Redux
+- Redux là 1 thư viện viết bằng Javascript
+- Redux dùng để quản lý state (trạng thái) của toàn bộ ứng dụng (Giống việc khai báo 1 biến ở chế độ toàn cục để có thể sử dụng ở nhiều nơi)
+- Cài đặt npm install redux react-redux
+🛎️Các hoạt động của Redux
+- Store: là một kho để lưu trữ các state và phân phát các state cho các component
+- Action: Những hành động có thể xảy ra 
+- Dispatch: Dùng để kích hoạt một action và gửi action đó đến Reducer
+- Reducer: Dùng để tiếp nhận action do Dispatch gửi tới, sau đó xử lý logic để ra được một kết quả, và lưu kết quả đó vào store
+- Cách hoạt động: Sau khi một action được thực thi, dispatchcer sẽ được kích hoạt và gửi đến reducer một action. Lúc này reducer thực hiện hành động dựa vào action được gửi đến. Sau đó, đồng thời lưu lại giá trị của state mới vào trong store và trả về state mới đó 
+🛎️Các bước sử dụng Redux
+- Bước 1: Cài đặt redux bằng câu lệnh npm install redux react-redux (chỉ cần cài 1 lần)
+- Bước 2: Tạo cấu trúc thư mục (thêm folder actions, reducers)
+- Bước 3: Thêm những action vào file actions/tenFile.js 
+- Bước 4: Thêm reducer vào file reducers/tenFile.js
+- Bước 5: tạo file reducers/index.js để gộp tất cả reducer lại và cho vào cùng một store. Sử dụng hàm combineReducers của redux để hợp nhất tất cả reducer thành 1 reducer là allReducers
+- Bước 6: Ở file index.js (file cấp cao nhất) sử dụng hàm createStore để tạo store chứa allReducers. Tiếp theo ta gói <App /> bên trong 1 component hỗ trợ của react-redux là Provider, nhờ đó tất cả component bên trong <App /> có thể truy cập được store
+- Bước 7: 
+    + Sử dụng useSelector của react-redux để lấy các state từ store
+    + Sử dụng useDispatch để trả về function dispatch, truyền các action vào dispatch để cập nhật lại state
+🛎️Một số ví dụ 
+- Ví dụ 1: Tăng, giảm số khi click, reset click
+- Ví dụ 2: Ứng dụng todo list

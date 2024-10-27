@@ -1,0 +1,42 @@
+28tech—Học React Router
+🛎️Giới thiệu
+- React Router là một thư viện được viết bằng React để quản lý routing trong các ứng dụng web
+- Ví dụ:
++ Trang chủ: https://domain.com 
++ Trang liên hệ: https://domain.com/contact
++ Trang blog: https://domain.com/blog
+- Link cài đặt trên trang NPM: https://www.npmjs.com/package/react-router-dom 
+- Trang chủ: https://reactrouter.com/en/main
+- Câu lệnh cài đặt: npm install react-router-dom
+🛎️Cách sử dụng components của React Router
+- BrowserRoute: Để kết nối ứng dụng của bạn với URL của trình duyệt thì phải import BrowserRoute và bọc nó bên ngoài toàn bộ ứng dụng chính là component App
+- Routes: Cung cấp các tuyến đường (routers) để điều hướng các thành phần của ứng dụng React. Dùng để bọc ở bên ngoài danh sách các Router
+- Route: Được sử dụng để định nghĩa một route để điều hướng đến một component cụ thể 
+- Link: Cho phép chuyển đổi giữa các URL khác nhau mà không cần load lại trang (nó tương tự như thẻ <a> trong HTML)
+- Outlet: Nó dùng để xác định vị trí mà component trong route được hiển thị (Sử dụng giống {props.children} trong React)
+- NavLink: Cũng giống Link, nhưng nếu URL trùng với link của NavLink thì sẽ thêm class là active
+- Navigate: Sử dụng Navigate để tự động chuyển hướng đến một trang nào đó
+🛎️Nested Routes
+- Để tạo ra các route con lồng nhau 
+- Ví dụ: 
++ https://domain.com/blog/news: Trang tin tức mới
++ https://domain.com/blog/related: Trang tin tức có liên quan
+🛎️Index routes 
+- Để hiển thị component ở route con ra ngoài route cha 
+- Như ví dụ ở trên thì khi truy cập vào https://domain.com/blog sẽ load component Blog và không hiển thị component con nào cả 
+- Điều chúng ta mong muốn là vẫn URL như vậy nhưng vẫn hiển thị một component con nào đó ở ngay component cha 
+- Để làm được điều này chúng ta sử dụng index và truyền component con muốn được hiển thị 
+🛎️Dynamic routes
+- Dynamic routes giúp chúng ta tạo ra được các routes động
+🛎️Hooks của React Router
+- useParams: Dùng để lấy được tham số trên param 
+- useNavigate: Dùng để điều hướng đến một đường dẫn khác, hoặc trở về các trang trước đó đã truy cập 
+🛎️Protected routes
+- Giả sử ứng dụng của chúng ta có hai phần: public và private
++ Phần public thì ai cũng có thể truy cập được như trang chủ, trang blog...
++ Phần private thì phải đăng nhập vào mới xem được như trang thông tin cá nhân,...
+- Về hành vi đối với người dùng 
++ Nếu đăng nhập rồi thì truy cập được tất cả các link của public hay private...
++ Nếu chưa thì chỉ truy cập được các trang của public, nếu người dùng vẫn cố truy cập vào các trang private thì ta điều hướng họ sang trang login
+🛎️Route Objects
+- Hook useRoutes dùng để xác định các tuyến đường dưới dạng object thuần javascript thay cho <Routes> và <Route>

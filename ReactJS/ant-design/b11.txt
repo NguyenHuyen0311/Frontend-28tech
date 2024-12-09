@@ -1,0 +1,120 @@
+28tech—Học Ant Design (Tiết 1)
+🛎️Giới thiệu và cài đặt
+- Ant Design là một thư viện để xây dựng UI (giao diện người dùng)
+- Ant Design cung cấp nhiều Component để xây dựng ứng dụng web chất lượng cao và dễ bảo trì 
+- Được phát triển bởi tập đoàn Alibaba
+- Cách học:
++ Lên trực tiếp trang chủ Ant Design để đọc tài liệu
++ Vì có rất nhiều component nên không thể nhớ hết và cũng không cần thiết phải nhớ
++ Khi nào cần đến component nào thì lên đọc tài liệu của component đó
+- Hướng dẫn cài đặt:
++ Link website: https://ant.design/
++ Link NPM: https://www.npmjs.com/package/antd
++ Câu lệnh cài đặt: npm i antd
+🛎️Component: Button
+Thuộc tính         Mô tả                                                            Kiểu                        Mặc định
+block              Chiều rộng của button bằng chiều rộng của element cha            boolean                     false
+danger             Trạng thái button dạng nguy hiểm (màu đỏ)                        boolean                     false
+disabled           Trạng thái button bị vô hiệu hóa                                 boolean                     false
+ghost              Background trong suốt                                            boolean                     false
+href               Chèn link cho button (giống thẻ <a> trong HTML)                  string                     
+icon               Chèn icon cho button                                             ReactNode
+loading            Thêm trạng thái loading cho button                               boolean                     false
+shape              Hình dạng của button                                             default | circle | round    default
+size               Kích thước button                                                large | middle | small      middle
+target             Giống target của thẻ <a>                                         string         
+type               Kiểu của button: primary, ghost, dashed, link, text, default     string                      default
+onClick            Lắng nghe sự kiện click    
+🛎️Component: Icon
+- Các bước nhúng icon: 
++ Bước 1: Import bằng câu lệnh import { SearchOutlined } from "@ant-design/icons";
++ Bước 2: Chèn icon <SearchOutlined /> vào vị trí muốn hiển thị
+- API:
+Thuộc tính         Mô tả                                            Kiểu           Mặc định
+rolate             Xoay theo n độ (không hoạt động trong IE9)       number 
+spin               Xoay icon vòng tròn                              boolean        false
+🛎️Component: Typography
+Thuộc tính         Mô tả                                            Kiểu           Mặc định
+copyable           Thêm nút sao chép hiển thị bên cạnh              boolean        false
+editable           Thêm nút chỉnh sửa văn bản bên cạnh              boolean        false
+🛎️Component: Grid
+- Ant Design chia giao diện thành 24 cột 
+- API:
++ Row:
+Thuộc tính         Mô tả                                 Kiểu                                                                       Mặc định
+align              Căn dọc (Vertical align)              top | middle | bottom | stretch                                            top 
+gutter             Khoảng cách giữa các cột              number                                                                     0
+justify            Căn các cột theo chiều ngang          start | end | center | space-around | space-between | space-evenly         start 
+wrap               Tự động xuống dòng                    boolean                                                                    true
+- Ví dụ: https://enlink.themenate.net/dashboard/default
++ Col: 
+Thuộc tính         Mô tả                                 Kiểu                                        Mặc định
+flex               Độ rộng của cột linh hoạt             auto | none | 100px, 200px,...               
+offset             Cách bên trái bao nhiêu cột           number                                      0
+order              Thứ tự của cột                        number                                      0 
+span               Số lượng cột cho 1 box                number                                      
+xs                 Áp dụng cho screen < 576px            number | object
+sm                 Áp dụng cho screen >= 576px           number | object
+md                 Áp dụng cho screen >= 768px           number | object
+lg                 Áp dụng cho screen >= 992px           number | object
+xl                 Áp dụng cho screen >= 1200px          number | object
+xxl                Áp dụng cho screen >= 1600px          number | object
+🛎️Component: Layout
+- Dùng để xử lý bố cục tổng thể của một trang 
+- Các component của Layout:
++ Layout: 
+    . Bao bọc toàn bộ bố cục (tương ứng với thẻ <section> tron HTML)
+    . Bên trong có thể chứa các component như: Header, Sider, Content, Footer, hoặc lồng một Layout khác
++ Header: Là header của trang (tương ứng với thẻ <header> tron HTML)
++ Sider: Là menu bên trái của trang (tương ứng với thẻ <aside> tron HTML)
++ Content: Chứa toàn bộ nội dung của trang (tương ứng với thẻ <main> tron HTML)
++ Footer: Là chân trang (tương ứng với thẻ <footer> tron HTML)
+* API cho Sider 
+Thuộc tính             Mô tả                                                                                                   Kiểu                                     Mặc định
+breakpoint*            Điểm ngắt của responsive giao diện                                                                      xs | sm | md | lg | xl | xxl 
+                       Mặc định Sider mở ra, nếu chiều rộng màn hình nhỏ hơn điểm ngắt đó thì Sider tự động đóng vào
+collapsed*             Để thiết lập Sider là mở hay đóng                                                                       boolean
+collapsedWidth         Chiều rộng của Sider khi đang được đóng                                                                 number                                   80
+                       Nếu = 0 thì sẽ chỉ hiện lên icon menu 
+collapsible            Có hiển thị nút đóng hay mở hay không?                                                                  boolean                                  false
+theme*                 Chủ đề màu của Sider                                                                                    light | dark                             dark
+trigger                Tùy chỉnh nút đóng/mở                                                                                   element | null       
+                       Nếu là null thì ẩn nút đóng/mở
+width                  Chiều rộng của Sider                                                                                    number | string                          200
+onBreakpoint*          Được kích hoạt khi điểm ngắt (breakpoints) thay đổi                                                     (broken) => {}
+onCollapse             Được kích hoạt khi click vào nút đóng/mở hoặc khi điểm ngắt (breakpoints) thay đổi                      (collapsed, type) => {}
+🛎️Component: Dropdown
+- API: 
+Thuộc tính             Mô tả                                                                            Kiểu                                                Mặc định
+arrow                  Mũi tên thả xuống của popup menu                                                 boolean | {pointAtCenter: boolean}                  false
+                       pointAtCenter: true dùng để căn giữa mũi tên 
+disabled               Không cho chọn item nào đó (Áp dụng cho item)                                    boolean
+dropdownRender         Tùy chỉnh nội dung dropdown                                                      (menus: ReactNode) => ReactNode                                   
+menu                   Để chèn array menu vào                                                                                                  
+placement              Vị trí của popup menu: bottom bottomLeft bottomRight top topLeft topRight        string                                              bottomLeft                                                                                                           
+trigger                Kích hoạt kiểu hành động của dropdown                                            array: ['click'] | ['contextMenu'] | [hover]        [hover]
+🛎️Component: Menu
+- API:
++ Menu:
+Thuộc tính                  Mô tả                                                                                       Kiểu                                    Mặc định
+defaultOpenKeys*            Thiết lập xem menu con có mở mặc định hay đóng                                              string[]
+                            Ví dụ: defaultOpenKeys={['sub1']}, thì menu có key là sub1 sẽ mặc định hiển thị  
+defaultSelectedKeys*        Thiết lập cho item nào mặc định đang active                                    
+expandIcon                  Đổi item mũi tên mở/đóng cho các item                                                       ReactNode
+                            Ví dụ: expandIcon={<AppstoreOutlined />}                                                                                        
+forceSubMenuRender          Render menu con vào DOM trước khi nó được hiển thị                                          boolean                                 false                                            
+items*                      Danh sách các item trong menu                                                               array
+mode*                       Loại menu                                                                                   vertical | horizontal | inline          vertical
+multiple                    Cho phép chọn nhiều mục                                                                     boolean                                 false
+openKeys                    Một mảng các menu con mặc định được mở                                                      string[]
+                            Ví dụ: openKeys={['sub1', 'sub2', 'sub3']}
+theme*                      Chủ đề màu sắc của menu                                                                     light | dark                            light
+onClick*                    Được gọi khi một mục menu được nhấp vào                                                     function({ item, key, keyPath, domEvent })
+onOpenChange*               Được gọi khi một mục menu được mở hoặc đóng                                                 function(openKeys: string[])
+onSelect*                   Được gọi khi một mục menu được chọn                                                         function({ item, key, keyPath, selectedKeys, domEvent })
++ Menu Item:
+Thuộc tính          Mô tả                                                                               Kiểu                Mặc định
+danger              Hiển thị kiểu nguy hiểm (chữ đỏ, chỉ áp dụng cho item không có menu con)            boolean             false
+disabled            Thêm disabled cho item                                                              boolean             false
+icon                Chèn icon cho item                                                                  ReactNode
+key                 ID duy nhất của item                                                                string

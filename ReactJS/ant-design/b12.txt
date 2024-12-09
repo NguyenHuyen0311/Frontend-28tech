@@ -1,0 +1,133 @@
+28tech—Học Ant Design (Tiết 2)
+🛎️Component: Checkbox
+- API: 
++ Checkbox: 
+Thuộc tính              Mô tả                                                                                           Kiểu                Mặc định
+autoFocus               Tự động focus vào ô checkbox khi component load xong. Chỉ áp dụng được cho 1 checkbox           boolean             false
+checked                 Chỉ định xem checkbox có được chọn hay không                                                    boolean             false
+defaultChecked          Chỉ định trạng thái ban đầu: checkbox có được chọn hay không                                    boolean             false
+disabled                Dùng để vô hiệu hóa checkbox                                                                    boolean             false
+onChange                Hàm callback được gọi khi trạng thái thay đổi                                                  
+🛎️Component: DatePicker
+- API:
+Thuộc tính              Mô tả                                                               Kiểu                                            Mặc định
+allowClear*             Có hiển thị nút clear hay không                                     boolean                                         true
+autoFocus*              Tự động focus khi component được render                             boolean                                         false
+bordered*               Có thêm border hay không                                            boolean                                         true
+disabled*               Để vô hiệu hóa, không cho chọn                                      boolean                                         false
+format*                 Dùng để định dạng ngày                                              string
+                        Ví dụ: format="DD-MM-YYYY HH:mm:ss"
+                        Tham khảo thêm: https://day.js.org/docs/en/display/format                                                  
+placement*              Vị trí bảng chọn được mở lên                                        bottomLeft bottomRight topLeft topRight         bottomLeft
+size*                   Đặt kích thước của ô input                                          large | middle | small                          middle
+                        large: có height = 40px
+                        middle: có height = 32px
+                        small: có height = 24px
+status*                 Đặt trạng thái xác thực                                             'error' | 'warning'
+suffixicon              Chỉnh sửa icon calendar trong ô input                               ReactNode
+nextIcon                Chỉnh sửa icon next (có 1 mũi tên)                                  ReactNode
+previcon                Chỉnh sửa icon prev (có 1 mũi tên)                                  ReactNode
+superNextIcon           Chỉnh sửa icon next (có 2 mũi tên)                                  ReactNode
+superPrevIcon           Chỉnh sửa icon prev (có 2 mũi tên)                                  ReactNode
+onOpenChange            Là một hàm được gọi khi bảng chọn được mở hoặc đóng                 ReactNode
+🛎️Component: Input
+- API:
++ Input: 
+Thuộc tính              Mô tả                                                           Kiểu                            Mặc định
+addonAfter*             Label được hiển thị phía sau (ở bên phải) của ô input           ReactNode           
+addonBefore*            Label được hiển thị phía trước (ở bên trái) của ô input         ReactNode
+allowClear*             Thêm nút clear (icon x) để xóa dữ liệu                          boolean                         false
+bordered*               Có hiển thị border hay không?                                   boolean                         true
+defaultValue*           Giá trị khởi tạo ban đầu                                        string          
+disabled*               Vô hiệu hóa ô input                                             boolean                         false   
+id*                     Thêm id cho ô input                                             string
+maxLength*              Số ký tự tối đa                                                 number  
+showCount*              Hiển thị số lượng ký tự đã điền                                 boolean                         false
+status*                 Đặt trạng thái xác thực                                         'error' | 'warning' 
+prefix*                 Thêm biểu tượng trong ô input và hiển thị phía trước            ReactNode                       
+size*                   Đặt kích thước của ô input                                      large | middle | small          
+                        large: có height = 40px
+                        middle: có height = 32px
+                        small: có height = 24px
+suffix*                 Thêm biểu tượng trong ô input và hiển thị phía trước            ReactNode
+type*                   Kiểu của ô input                                                string                          text
+value*                  Giá trị của ô input                                             string
+onChange*               Gọi hàm khi giá trị trong ô input được thay đổi                 function(e)
+onPressEnter            Gọi hàm khi người dùng gõ xong và nhấn phím Enter               function(e)
++ Input.TextArea:   
+Thuộc tính              Mô tả                                                       Kiểu                        Mặc định
+allowClear*             Thêm nút clear (icon x) để xóa dữ liệu                      boolean                     false
+autoSize*               Tính năng tự động điền chiều cao                            boolean | object            false
+                        Có thể đặt ccas giá trị: 
+                        boolean: true | false
+                        object: {minRows: number, maxRows: number}
+bordered*               Có hiển thị border hay không?                               boolean                     true 
+defaultValue*           Giá trị khởi tạo ban đầu                                    string
+maxLength*              Số ký tự tối đa                                             number
+showCount*              Hiển thị số lượng ký tự đã điền                             boolean                     false
+onPressEnter            Gọi hàm khi người dùng gõ xong và nhấn phím Enter           function(e)
+onResize                Gọi hàm khi người dùng thay đổi kích thước ô textarea       function(e)
++ Input.Search:
+Thuộc tính              Mô tả                                                                           Kiểu                        Mặc định
+enterButton             Thêm button sau ô input và tùy chỉnh được button theo ý muốn                    boolean | ReactNode         false
+loading*                Thêm loading cho button tìm kiếm                                                boolean                     false
+onSearch*               Gọi hàm khi người dùng click vào icon xóa, nút tìm kiếm, bấm enter              function(value, event)
++ Input.Password:
+Thuộc tính              Mô tả                                   Kiểu                        Mặc định
+iconRender              Button có thể toggle để đổi icon        (visible) => ReactNode      (visible) => (visible ? <EyeOutlined /> : <EyeInvisibleOutlined />)
+🛎️Component: Radio
+- API:
++ Radio:
+Thuộc tính              Mô tả                                                               Kiểu            Mặc định
+autoFocus*              Tự động focus vào khi component render xong                         boolean         false
+checked*                Chỉ định xem radio có được chọn hay không                           boolean         false
+defaultChecked*         Chỉ định trạng thái ban đầu: radio có được chọn hay không           boolean         false
+disabled*               Vô hiệu hóa radio                                                   boolean         false
+value*                  Giá trị của radio                                                   any             
+🛎️Component: Select
+- API:
++ Select: 
+Thuộc tính              Mô tả                                                                                                                       Kiểu                                                Mặc định
+allowClear*             Hiển thị nút clear data                                                                                                     boolean                                             false
+autoFocus*              Tự động focus vào thẻ Select                                                                                                boolean                                             false
+bordered*               Thêm border hay không?                                                                                                      boolean                                             true
+clearIcon               Tùy chỉnh icon clear                                                                                                        ReactNode         
+defaultOpen             Trạng thái mở ban đầu dropdown                                                                                              boolean             
+defaultValue*           Tùy chọn được chọn ban đầu                                                                                                  string | number | array
+disabled*               Vô hiệu hóa                                                                                                                 boolean                                             false
+filterOption            Lọc ra những lựa chọn khớp với từ mà người dùng nhập vào ô input sau đó hiển thị ra để gợi ý                                function(inputValue, option)
+                        Ví dụ: filterOption={(input, option) => (option?.label??"").includes(input)}
+                        Ghi chú: "A??B" là phép toán "nullish coalescing". Nếu A được xác định (khác null hoặc undefined), A sẽ được trả về. 
+                        Nếu A là null hoặc undefined, thì B sẽ được trả về
+labelInValue            Giá trị trả về là 1 object bao gồm value và label                                                                           boolean                                             false
+listHeight              Cấu hình chiều cao dropdown                                                                                                 number                                              256
+loading                 Thêm loading đằng sau dropdown                                                                                              boolean                                             false
+maxTagCount             Số lượng tag tối đa để hiển thị.
+                        Nếu giá trị là responsive thì sẽ tự động để số lượng item vừa với chiều rộng giao diện                                      number | responsive
+notFoundContent         Chỉ định nội dung sẽ hiển thị khi không có kết quả phù hợp                                                                  ReactNode                                           Not Found
+options*                Danh sách các lựa chọn                                                                                                      { label, value }[]
+placement*              Vị trí bảng chọn bật lên                                                                                                    bottomLeft, bottomRight, topLeft, topRight          bottomLeft 
+showArrow*              Có hiển thị mũi tên dropdown hay không?                                                                                     boolean
+showSearch*             Có hiển thị icon search hay không?                                                                                          boolean                                             
+size*                   Kích thước của dropdown                                                                                                     large | middle | small                              middle
+status*                 Đặt trạng thái xác thực cho dropdown                                                                                        'error' | 'warning'
+                        error có border đỏ
+                        warning có border vàng  
+suffixicon              Tùy chỉnh biểu tượng ở hậu tố (icon down)                                                                                   ReactNode   
+value*                  Những giá trị đang được chọn                                                                                                string | string[] | number | number[]
+onChange*               Được gọi khi có thay đổi giá trị                                                                                            function(value, option: Option | Array<Option>)
+onClear*                Được gọi khi click vào nút clear (dấu x: allowClear)                                                                        function
+onDeselect*             Được gọi khi bỏ chọn 1 tùy chọn bất kỳ                                                                                      function(value: string | number)
+onDeselect*             Được gọi khi gõ chữ tìm kiếm                                                                                                function(value)
+onDeselect*             Được gọi khi chọn một lựa chọn                                                                                              function(value: string | number, option: Option)
+🛎️Component: Switch
+Thuộc tính              Mô tả                                               Kiểu                                            Mặc định
+autoFocus               Được focus vào khi component load xong              string                                          false
+checked                 Xác định xem Switch có được bật hay không           string                                          false
+checkedChildren         Nội dung con ở bên trong khi Switch được bật        ReactNode
+unCheckedChildren       Nội dung con ở bên trong khi Switch được tắt        ReactNode
+defaultChecked          Trạng thái ban đầu của Switch                       boolean                                         false
+disabled                Có bị vô hiệu hóa hay không?                        boolean                                         false
+loading                 Có thêm hiệu ứng loading hay không?                 boolean                                         false
+size                    Kích thước của Switch: default và small             string                                          default
+onChange                Được gọi mỗi khi bật/tắt Switch                     function(checked: boolean, event: Event)

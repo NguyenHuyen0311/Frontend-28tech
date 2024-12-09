@@ -1,0 +1,21 @@
+28tech—Học Ant Design (Tiết 4)
+🛎️Component: Tag
+- API:
++ Tag:
+Thuộc tính          Mô tả                               Kiểu                Mặc định
+closable*           Có thể đóng tag hay không?          boolean             false
+closeIcon*          Tùy chỉnh biểu tượng close          ReactNode               
+color*              Màu của tag                         string
+                    Ví dụ: color="#F0A830"
+icon*               Đặt icon cho tag                    ReactNode
+bordered*           Có hiển thị border hay không?       boolean             true
+                    Ví dụ: bordered="false"
+onClose*            Được gọi khi đóng thẻ               (e) => void 
+🛎️Component: Tooltip
+🛎️Component: Message
+🛎️Component: Modal
+🛎️Component: Notification
+🛎️Component: Skeleton
+🛎️Component: Spin
+🛎️Component: QRCode
+🛎️Component: Rate 

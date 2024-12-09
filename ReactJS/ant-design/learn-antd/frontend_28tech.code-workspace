@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../backend_28tech"
+		},
+		{
+			"path": "../../../../../do_an/Example_DATN"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "frontend_28tech"
+	}
+}

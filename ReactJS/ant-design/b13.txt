@@ -1,0 +1,110 @@
+28tech—Học Ant Design (Tiết 3)
+🛎️Component: Form
+- API:
++ Form:
+Thuộc tính          Mô tả                                                                           Kiểu                                                    Mặc định
+colon               Có hiển thị dấu hai chấm sau label hay không?                                   boolean                                                 true
+disabled*           Vô hiệu hóa biểu mẫu                                                            boolean                                                 false
+form*               Để kiểm soát biểu mẫu                                                           FormInstance
+                    Ví dụ: const [form] = Form.useForm();
+                    <Form form={form}></Form>
+initialValues*      Đặt giá trị khởi tạo cho biểu mẫu                                               object
+labelWrap*          Nếu nội dung của label quá dài thì có tự động xuống dòng hay không?             boolean                                                 false
+layout*             Bố cục biểu mẫu                                                                 horizontal | vertical | inline                          horizontal
+name*               Tên biểu mẫu                                                                    string
+                    Làm tiền tố cho id của các trường trong form
+scrollToFirstError* Tự động cuộn đến trường bị lỗi đầu tiên khi gửi biểu mẫu                        boolean | Options                                       false
+size*               Kích thước của các trường trong form                                            small | middle | large      
+onFinish*           Được gọi sau khi gửi biểu mẫu và xác minh dữ liệu thành công                    function(values)
+onFinishFalied*     Được gọi sau khi gửi biểu mẫu và xác minh dữ liệu không thành công              function({values, errorFields, outOfDate})  
++ Form.Item:
+Thuộc tính          Mô tả                                                                                       Kiểu                Mặc định
+dependencies        Đặt trường phụ thuộc                                                                        NamePath[]          
+                    Ví dụ: trường Confirm Password phụ thuộc vào trường Password
+extra*              Thêm thông báo nhắc thêm ở dưới các trường (chữ nhỏ)                                        ReactNode
+initialValue        Giá trị khởi tạo cho một trường.                                                            string 
+                    Nếu biểu mẫu cũng có initialValues thì sẽ ưu tiên giá trị khởi tạo của biểu mẫu hơn 
+name*               Tên của trường                                                                              NamePath
+required*           Bắt buộc phải nhập giá trị vào trường                                                       boolean             false
+🛎️Component: Badge
+🛎️Component: Carousel
+🛎️Component: Collapse
+- API:
++ Collapse:
+Thuộc tính          Mô tả                                                                   Kiểu                                        Mặc định
+accordion*          Nếu đúng, mỗi lần click sẽ mở tab hiện tab mới và đóng tab cũ đi        boolean                                     false
+bordered            Có hiển thị border hay không?                                           boolean                                     true 
+collapsible*        Chỉ định xem khu vực có thể click vào đóng/mở tab được                  header | icon | disabled        
+defaultActiveKey*   Danh sách các tab được mở mặc định khi component render xong            string[] | string | number[] | number
+expandIcon*         Thay đổi icon đóng/mở                                                   (panelProps) => ReactNode
+                    Ví dụ: expandIcon={() => <>test</>}
+expandIconPosition* Điều chỉnh icon đóng/mở nằm ở vị trí bắt đầu hoặc kết thúc              start | end 
+ghost               Border và nền chuyển thành trong suốt (transparent)                     boolean                                     false
+size*               Kích thước của các tab                                                  large | middle | small                      middle
++ Collapse.Panel:
+Thuộc tính          Mô tả                                                           Kiểu                                Mặc định
+collapsible*        Chỉ định xem khu vực có thể click vào đóng/mở tab được          header | icon | disabled            
+header*             Tiêu đề của tab                                                 ReactNode
+key*                Thêm key duy nhất cho mỗi tab                                   string | number
+showArrow           Có hiển thị nút đóng/mở hay không?                              boolean                             true
+🛎️Component: Image
+Thuộc tính          Mô tả                                                               Kiểu                Mặc định
+alt*                Mô tả cho hình ảnh, sẽ hiển thị nếu ảnh lỗi                         string      
+fallback*           Là một ảnh thay thế nếu ảnh chính bị lỗi                            string
+height*             Chiều cao của ảnh                                                   string | number
+placeholder         Load ảnh này trước nếu ảnh chính chưa kịp load xong                 ReactNode
+                    (thường ảnh này là ảnh dung lượng nhỏ để show lên giữ chỗ)
+preview*            Có cho preview ảnh không?                                           boolean
+src*                Đường dẫn ảnh                                                       string
+width*              Chiều rộng của ảnh                                                  string | number
+onError*            Được gọi khi ảnh load không thành công                              (event) => void
+rootClassName       Thêm className cho component                                        string
+🛎️Component: Table
+- API:
++ Table:
+Thuộc tính          Mô tả                                   Kiểu                                        Mặc định
+bordered*           Thêm border cho table                   boolean                                     false
+columns*            Các cột của table                       ColumnsType[]           
+dataSource*         Một mảng các bản ghi                    object[]
+expandable          Cấu hình thêm phần nội dung mở rộng     expandable
+footer              Thêm footer cho table                   function(currentPageData)
+loading*            Thêm trạng thái loading cho table       boolean                                     false
+pagination*         Cấu hình phân trang                     object | false
+                    Ví dụ: pagination: {
+                        current: 1,
+                        pageSize: 20
+                    }
+rowKey*             Thêm key cho mỗi hàng                   string | function(record): string           key
+rowSelection*       Thêm ô tích để chọn hàng                object
+scroll*             Cấu hình hàng có thể được cuộn          object
+showHeader*         Có hiện header hay không?               boolean                                     true 
+size*               Kích thước của bảng                     large | middle | small                      large
++ Column:
+Thuộc tính          Mô tả                                                                               Kiểu                                                            Mặc định
+align               Căn chỉnh nội dung của cột                                                          left | right | center                                           left
+dataIndex           key của một object trong 1 mảng                                                     string | string[]
+key                 Key duy nhất của một cột                                                            string
+render              Chỉnh sửa lại cách render data ra giao diện, giá trị trả về là một ReactNode        function(text, record, index) {}
+title               Tiêu đề của cột                                                                     ReactNode | ({sortOrder, sortColumn, filters}) => ReactNode
+width               Chiều rộng của cột                                                                  string | number
++ rowSelection:
+Thuộc tính          Mô tả                                                   Kiểu                                                            Mặc định
+hideSelectAll       Có ẩn checkbox all hay không?                           boolean                             
+                    Ví dụ: rowSelection={{hideSelectAll: true}}             
+selectedRowKeys*    Một mảng các key của các hàng đã chọn                   string[] | number[]
+type*               Chọn kiểu là checkbox hoặc radio                        checkbox | radio                                                checkbox
+onChange*           Được gọi mỗi khi các lựa chọn thay đổi                  function(selectedRowKeys, selectedRows, info: {type})
+onSelect*           Được gọi mỗi khi chọn/bỏ một hàng                       function(record, selected, selectedRows, nativeEvent)
+onSelectAll*        Được gọi mỗi khi chọn/bỏ tất cả các hàng                function(selected, selectedRows, changeRows)
+🛎️Component: Tabs
+Thuộc tính          Mô tả                                                                       Kiểu                                    Mặc định
+activeKey           Tab hiện tại đang bật (truyền vào key của nó)                               string
+centered            Đặt tabs ra chính giữa                                                      boolean                                 false
+defaultActiveKey    Khởi tạo tab ban đầu được hiển thị (nếu activeKey không được thêm vào)      string
+items               Danh sách các tab                                                           TabItemType                             []                                          
+size                Kích thước thanh tab đặt trước                                              large | middle | small                  middle
+tabBarGutter        Khoảng cách giữa các tab                                                    number
+tabBarStyle         Css cho các tab                                                             CSSProperties
+tabPosition         Vị trí của các tab                                                          top | right | bottom | left             top 
+type                Kiểu của tab                                                                line | card | editable-card             line 
+onChange            Được gọi khi tab thay đổi                                                   function(activeKey) {}

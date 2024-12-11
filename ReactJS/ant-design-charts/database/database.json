@@ -1,0 +1,295 @@
+{
+    "basic-line": [
+        {
+            "date": "01-2023",
+            "quantity": 7455
+        },
+        {
+            "date": "02-2023",
+            "quantity": 2445
+        },
+        {
+            "date": "03-2023",
+            "quantity": 2165
+        },
+        {
+            "date": "04-2023",
+            "quantity": 7544
+        },
+        {
+            "date": "05-2023",
+            "quantity": 5213
+        },
+        {
+            "date": "06-2023",
+            "quantity": 6932
+        },
+        {
+            "date": "07-2023",
+            "quantity": 8725
+        },
+        {
+            "date": "08-2023",
+            "quantity": 7455
+        },
+        {
+            "date": "09-2023",
+            "quantity": 6289
+        },
+        {
+            "date": "10-2023",
+            "quantity": 1356
+        },
+        {
+            "date": "11-2023",
+            "quantity": 4293
+        },
+        {
+            "date": "12-2023",
+            "quantity": 3728
+        }
+    ],
+
+    "multi-line": [
+        {
+            "year": "1850",
+            "value": 0,
+            "category": "Nhiên liệu lỏng"
+        },
+        {
+            "year": "1850",
+            "value": 54,
+            "category": "Nhiên liệu rắn"
+        },
+        {
+            "year": "1850",
+            "value": 0,
+            "category": "Nhiên liệu gas"
+        },
+        {
+            "year": "1850",
+            "value": 0,
+            "category": "Xi măng"
+        },
+        {
+            "year": "1851",
+            "value": 256,
+            "category": "Nhiên liệu lỏng"
+        },
+        {
+            "year": "1851",
+            "value": 57,
+            "category": "Nhiên liệu rắn"
+        },
+        {
+            "year": "1851",
+            "value": 2,
+            "category": "Nhiên liệu gas"
+        },
+        {
+            "year": "1851",
+            "value": 76,
+            "category": "Xi măng"
+        },
+        {
+            "year": "1852",
+            "value": 544,
+            "category": "Nhiên liệu lỏng"
+        },
+        {
+            "year": "1852",
+            "value": 90,
+            "category": "Nhiên liệu rắn"
+        },
+        {
+            "year": "1852",
+            "value": 7,
+            "category": "Nhiên liệu gas"
+        },
+        {
+            "year": "1852",
+            "value": 4,
+            "category": "Xi măng"
+        },
+        {
+            "year": "1852",
+            "value": 567,
+            "category": "Nhiên liệu lỏng"
+        },
+        {
+            "year": "1853",
+            "value": 221,
+            "category": "Nhiên liệu rắn"
+        },
+        {
+            "year": "1853",
+            "value": 456,
+            "category": "Nhiên liệu gas"
+        },
+        {
+            "year": "1853",
+            "value": 23,
+            "category": "Xi măng"
+        },
+        {
+            "year": "1853",
+            "value": 745,
+            "category": "Nhiên liệu lỏng"
+        },
+        {
+            "year": "1853",
+            "value": 53,
+            "category": "Nhiên liệu rắn"
+        },
+        {
+            "year": "1854",
+            "value": 21,
+            "category": "Nhiên liệu gas"
+        },
+        {
+            "year": "1854",
+            "value": 3,
+            "category": "Xi măng"
+        },
+        {
+            "year": "1854",
+            "value": 78,
+            "category": "Nhiên liệu lỏng"
+        },
+        {
+            "year": "1854",
+            "value": 2357,
+            "category": "Nhiên liệu rắn"
+        },
+        {
+            "year": "1854",
+            "value": 1234,
+            "category": "Nhiên liệu gas"
+        },
+        {
+            "year": "1855",
+            "value": 24,
+            "category": "Xi măng"
+        },
+        {
+            "year": "1855",
+            "value": 547,
+            "category": "Nhiên liệu lỏng"
+        },
+        {
+            "year": "1855",
+            "value": 654,
+            "category": "Nhiên liệu rắn"
+        },
+        {
+            "year": "1855",
+            "value": 33,
+            "category": "Nhiên liệu gas"
+        },
+        {
+            "year": "1855",
+            "value": 14,
+            "category": "Xi măng"
+        },
+        {
+            "year": "1856",
+            "value": 178,
+            "category": "Nhiên liệu lỏng"
+        },
+        {
+            "year": "1856",
+            "value": 214,
+            "category": "Nhiên liệu rắn"
+        },
+        {
+            "year": "1856",
+            "value": 55,
+            "category": "Nhiên liệu gas"
+        },
+        {
+            "year": "1856",
+            "value": 432,
+            "category": "Xi măng"
+        }
+    ],
+
+    "pie": [
+        {
+            "type": "Loại 1",
+            "value": 27
+        },
+        {
+            "type": "Loại 2",
+            "value": 25
+        },
+        {
+            "type": "Loại 3",
+            "value": 18
+        },
+        {
+            "type": "Loại 4",
+            "value": 15
+        },
+        {
+            "type": "Loại 5",
+            "value": 10
+        },
+        {
+            "type": "Loại 6",
+            "value": 5
+        }
+    ],
+
+    "rose": [
+        {
+            "monHoc": "Toán",
+            "diem": 8,
+            "hoTen": "Lê Văn A"
+        },
+        {
+            "monHoc": "Lý",
+            "diem": 7,
+            "hoTen": "Lê Văn A"
+        },
+        {
+            "monHoc": "Hóa",
+            "diem": 8.5,
+            "hoTen": "Lê Văn A"
+        },
+        {
+            "monHoc": "Văn",
+            "diem": 5,
+            "hoTen": "Lê Văn A"
+        },
+        {
+            "monHoc": "Anh",
+            "diem": 6.5,
+            "hoTen": "Lê Văn A"
+        },
+        {
+            "monHoc": "Toán",
+            "diem": 10,
+            "hoTen": "Nguyễn Thị B"
+        },
+        {
+            "monHoc": "Lý",
+            "diem": 6,
+            "hoTen": "Nguyễn Thị B"
+        },
+        {
+            "monHoc": "Hóa",
+            "diem": 5.5,
+            "hoTen": "Nguyễn Thị B"
+        },
+        {
+            "monHoc": "Văn",
+            "diem": 9,
+            "hoTen": "Nguyễn Thị B"
+        },
+        {
+            "monHoc": "Anh",
+            "diem": 9.5,
+            "hoTen": "Nguyễn Thị B"
+        }
+    ]
+}

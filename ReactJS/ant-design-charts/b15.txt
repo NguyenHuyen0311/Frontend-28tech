@@ -1,0 +1,195 @@
+28tech—Học Ant Design Charts
+🛎️Giới thiệu và cài đặt
+- Ant Design Charts là một thư viện dùng để hiển thị các biểu đồ trên web với UI được thiết kế theo phong cách Ant Design
+- Ưu điểm:
++ Sử dụng dễ dàng
++ Biểu đồ đa dạng
++ Biểu đồ đẹp
+🛎️Hướng dẫn vẽ Chart 
+* Basic Line
+- Cách sử dụng:
++ Bước 1: import { Line } from "@ant-design/plots";
++ Bước 2: Nhúng chart: <Line {...config} />
++ Bước 3: Thêm object config
+const config = {
+    data: dataChart,
+    xField: "field hiển thị theo trục x",
+    yField: "field hiển thị theo trục y",
+}
+- Một số options:
+Thuộc tính      Mô tả                                                               Kiểu        Mặc định
+data            Một mảng dữ liệu truyền vào                                         array
+                Ví dụ: dataChart
+xField          Tên trường dữ liệu ứng với đồ thị theo trục x                       string
+                Ví dụ: xField: 'date'
+yField          Tên trường dữ liệu ứng với đồ thị theo trục x                       string
+                Ví dụ: yField: 'quantity'
+width           Đặt chiều rộng của biểu đồ                                          number      400
+                Ví dụ: width: 800
+height          Đặt chiều cao của biểu đồ                                           number      400
+                Ví dụ: height: 800
+autoFit         Biểu đồ có tự động điều chỉnh để vừa với vùng chứa hay không?       boolean     true 
+                Nếu true, cấu hình chiều rộng và chiều cao sẽ không có tác dụng
+                Ví dụ: autoFit: false
+smooth          Chuyển đường kẻ thành dạng đường cong mượt hơn                      boolean     false
+                Ví dụ: smooth: true 
+point           Thêm các chấm tròn vào từng mốc                                     boolean     false
+                Ví dụ: point: true 
+slider          Thêm thanh trượt để hiển thị biểu đồ nằm trong khoảng nào           
+                start: giá trị bắt đầu (từ 0 đến 1) 
+                end: giá trị kết thúc (từ 0 đến 1)
+                Ví dụ: slider: {
+                    start: 0,
+                    end: 1
+                } 
+color           Thuộc tính đặt màu sắc cho đường kẻ                                 string
+meta            Tùy chỉnh mở rộng                                                   object
+                alias: Thay đổi tên label
+                Ví dụ: meta: {
+                    quantity: {
+                        alias: "Số lượng",
+                    },
+                }
+label           Hiển thị thêm giá trị vào các cột mốc và style các giá trị đó       object
+                Ví dụ: label: {
+                    style: {
+                        fill: "red",
+                        opacity: 0.5,
+                        fontSize: 12,
+                        fontWeight: 700
+                    }
+                }
+* Multi Line
+- Các sử dụng: Giống Basic Line
+- Một số options: (Giống Basic Line)
+Thuộc tính      Mô tả                                                               Kiểu        Mặc định
+seriesField     Nhóm các trường lại để xem đồng thời nhiều trường hợp khác nhau     string
+                Ví dụ: seriesField: 'category'
+color           Thuộc tính đặt màu sắc cho các đường kẻ                             array
+                Ví dụ: ["#1979C9", "#D62A0D",...]
+* Step Line
+- Các sử dụng: Giống Basic Line
+- Một số options: (Giống Basic Line)
+Thuộc tính      Mô tả                                                                                                                   Kiểu                        Mặc định
+stepType        Biểu đồ hiển thị kiểu bước nhảy                                                                                         hv | vh | hvh | vhv 
+                v: vertical (thẳng đứng)
+                h: horizontal (nằm ngang)
+                Ví dụ: vh nghĩa là đường kẻ đầu tiên theo hướng thẳng đứng (vertical) đường kẻ tiếp theo nằm ngang (horizontal)
+* Basic Area
+- Cách sử dụng:
++ Bước 1: import { Area } from "@ant-design/plots";
++ Bước 2: Nhúng chart: <Area {...config} />
++ Bước 3: Thêm object config
+const config = {
+    data: dataChart,
+    xField: "field hiển thị theo trục x",
+    yField: "field hiển thị theo trục y",
+}
+- Một số options (Giống Basic Line)
+Thuộc tính      Mô tả                               Kiểu                Mặc định
+areaStyle       Thêm style cho biểu đồ Area         object
+                fill: đổ màu cho background
+                fillOpacity: độ mờ của background
+                Ví dụ: areaStyle: {
+                    fill: 'l(270) 0:#fff 0.5:#7ec2f3 1:#1890ff',
+                    fillOpacity: 0.2
+                }                                                                                             
+* Stacked Area
+- Một số options:
+Thuộc tính      Mô tả                                                               Kiểu        Mặc định
+seriesField     Nhóm các trường lại để xem đồng thời nhiều trường hợp khác nhau     string
+                Ví dụ: seriesField: 'category'
+color           Thuộc tính đặt màu sắc cho các đường kẻ                             array
+                Ví dụ: ["#1979C9", "#D62A0D",...]
+* Percented Area
+- Một số options: (Giống Multi Line)
+Thuộc tính      Mô tả                                                   Kiểu        Mặc định
+isPercent       Hiển thị theo dạng phần trăm xếp chồng hay không?       boolean             
+* Basic Column
+- Cách sử dụng:
++ Bước 1: import { Column } from "@ant-design/plots";
++ Bước 2: Nhúng chart: <Column {...config} />
++ Bước 3: Thêm object config
+const config = {
+    data: dataChart,
+    xField: "field hiển thị theo trục x",
+    yField: "field hiển thị theo trục y",
+}
+- Một số options (Giống Basic Line)
+Thuộc tính              Mô tả                               Kiểu            Mặc định
+columnWidthRatio        Tỷ lệ chiều rộng của cột [0-1]      number
+                        Ví dụ: columnWidthRatio: 0.2
+* Stacked Column
+- Một số options
+Thuộc tính      Mô tả                                   Kiểu            Mặc định
+isStack         Có xếp chồng lên nhau hay không?        boolean         false
+                Ví dụ: isStack: true 
+connectedArea   Vẽ vùng liên kết của cùng một trường    boolean                             
+* Grouped Column
+- Một số options
+Thuộc tính          Mô tả                                           Kiểu            Mặc định
+isGroup             Có chuyển thành dạng group hay không?           boolean         false
+                    Ví dụ: isGroup: true 
+dodgePadding        Khoảng cách giữa các cột trong cùng một nhóm    number
+                    Ví dụ: dodgePadding: 5
+intervalPadding     Khoảng cách giữa các nhóm                       number
+                    Ví dụ: intervalPadding: 20
+* Basic Bar
+- Cách sử dụng:
++ Bước 1: import { Bar } from "@ant-design/plots";
++ Bước 2: Nhúng chart: <Bar {...config} />
++ Bước 3: Thêm object config
+const config = {
+    data: dataChart,
+    xField: "field hiển thị theo trục x",
+    yField: "field hiển thị theo trục y",
+}
+* Stacked Bar
+* Grouped Bar
+* Pie
+- Cách sử dụng:
++ Bước 1: import { Pie } from "@ant-design/plots";
++ Bước 2: Nhúng chart: <Pie {...config} />
++ Bước 3: Thêm object config
+const config = {
+    data: dataChart,
+    angleField: "",
+    colorField: "",
+}
+- Một số options:
+Thuộc tính      Mô tả                                                                                   Kiểu            Mặc định
+angleField      Tên trường dữ liệu có giá trị tương ứng với kích thước các lát cắt cung (radian)        string 
+colorField      Tên trường dữ liệu tương ứng với màu từng loại                                          string
+* Basic Rose
+- Cách sử dụng:
++ Bước 1: import { Rose } from "@ant-design/plots";
++ Bước 2: Nhúng chart: <Rose {...config} />
++ Bước 3: Thêm object config
+const config = {
+    data: dataChart,
+    xField: "field hiển thị theo trục x",
+    yField: "field hiển thị theo trục y",
+}
+- Một số options:
+Thuộc tính      Mô tả                                   Kiểu            Mặc định
+seriesField     Các trường dùng để nhóm dữ liệu         string
+                Ví dụ: seriesField: 'type'
+* Grouped Rose
+- Một số options:
+Thuộc tính      Mô tả                                   Kiểu            Mặc định
+seriesField     Các trường dùng để nhóm dữ liệu         string
+                Ví dụ: seriesField: 'type'
+isGroup         Có chuyển thành dạng group hay không?   boolean         false
+                Ví dụ: isGroup: true 
+* Tiny Line
+- Cách sử dụng:
++ Bước 1: import { TinyLine } from "@ant-design/plots";
++ Bước 2: Nhúng chart: <TinyLine {...config} />
++ Bước 3: Thêm object config
+const config = {
+    data: dataChart,
+    height: 60,
+    width: 300,
+    autoFit: false
+}
+* Tiny Area 

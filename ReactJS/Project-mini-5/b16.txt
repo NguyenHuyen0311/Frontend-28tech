@@ -1,0 +1,61 @@
+28tech—Giao bài project cuối khóa và chữa bài project mini-5
+🛎️Giao bài project cuối khóa
+1. Giới thiệu bài toán
+- Đề bài: Làm trang web tuyển dụng ngành lập trình
+- Mô tả: Website tuyển dụng ngành lập trình là nơi để đăng những bài viết tuyển dụng liên quan đến các công việc lập trình,
+cho phép các công ty đăng các công việc (job) lên trên đó và người dùng có thể truy cập lên trang chủ để tìm kiếm công việc phù hợp
+2. Trang admin cho nhà tuyển dụng
+- Trang đăng nhập: Nhập email, password
+- Trang đăng ký: Tên công ty, số điện thoại, email, password
+- Trang dashboard tổng quan:
++ Thống kê số lượng job, job đang bật, job đang tắt
++ Thống kê số lượng CV, CV chưa đọc, CV đã đọc
++ Hiển thị một số thông tin cơ bản của công ty
+- Trang cấu hình thông tin công ty: Tên công ty, email, số điện thoại, địa chỉ, số lượng nhân sự, thời gian làm việc, link website, mô tả ngắn, mô tả chi tiết
+- Trang quản lý job 
++ Tạo job mới: Tên job, tags (html, css, js,... lấy từ api), thành phố, mức lương, mô tả job, trạng thái (bật/tắt), thời gian đăng bài(tự động lấy thời gian hiện tại), idCompany(tự động lấy trong cookie)
++ Danh sách job: 
+    . Một bảng gồm các cột: Tên job, tags, mức lương, thời gian đăng bài, thời gian cập nhật, trạng thái, hành động
+    . Cột hành động: Nút xem chi tiết, nút chỉnh sửa job (khi chỉnh sửa job gửi lên thời gian hiện tại), nút xóa job  
++ Trang chi tiết job: Tên job, trạng thái (bật/tắt), tags(html, css, js), mức lương, thời gian đăng bài (tự động lấy thời gian hiện tại), thời gian cập nhật bài, thành phố, mô tả job 
+- Trang quản lý CV 
++ Danh sách CV: Tên job, họ tên, số điện thoại, email, ngày gửi, trạng thái (đã xem/chưa xem), hành động(nút xóa, nút xem chi tiết - click vào chuyển trạng thái từ chưa đọc thành đã đọc)
++ Chi tiết CV: 
+    . Thông tin ứng viên: Họ tên, ngày gửi, số điện thoại, email, giới thiệu bản thân, thành phố ứng tuyển, danh sách link project đã làm 
+    . Thông tin job mà ứng viên đã ứng tuyển: Tên job, tags, mức lương, mô tả 
+3. Trang web cho người dùng vào tìm việc 
+- Trang chủ
++ Nút đăng ký làm nhà tuyển dụng
++ Hiển thị dropdown chọn thành phố + thanh search để người dùng tìm kiếm việc. Ví dụ: Hà Nội, TP Hồ Chí Minh, Đà Nẵng,...
++ Hiển thị danh sách các kỹ năng (khi click vào sẽ hiển thị danh sách các job liên quan đến kỹ năng đó). Ví dụ: HTML, CSS, Javascript, ReactJS, NodeJS, PHP, Java,...
++ Hiển thị danh sách một số công ty (khi click sẽ vào trang chi tiết công ty đó). Ví dụ: ACB, Samsung, Sun*,...
+- Trang kết quả tìm kiếm (Sau khi người dùng tìm kiếm sẽ chuyển đến trang này)
++ Danh sách các job liên quan đến: khu vực (nếu có) + từ khóa tìm kiếm (nếu có)
++ Mỗi job show ra một số thông tin cơ bản: tiêu đề, lương, tags, thành phố, thời gian đăng bài, tên công ty. Khi click vào 1 job sẽ sang trang chi tiết job đó
+- Trang chi tiết 1 job (Một số thông tin cơ bản)
++ Tên job
++ Nút ứng tuyển (Khi click vào link xuống form ứng tuyển)
++ Tags (html, css, js)
++ Thành phố
++ Mức lương 
++ Địa chỉ công ty 
++ Thời gian đăng bài
++ Mô tả job 
++ Giới thiệu công ty 
++ Form ứng tuyển: idJob, idCompany, họ tên, số điện thoại, email, giới thiệu bản thân, danh sách link project đã làm, thời gian gửi (tự động lấy thời gian hiện tại)
+- Trang danh sách công ty
++ Tên công ty 
++ Số điện thoại
++ Số nhân sự
++ Link website
++ Địa chỉ
+- Trang chi tiết công ty
++ Tên công ty 
++ Địa chỉ
++ Số lượng nhân sự
++ Thời gian làm việc 
++ Link website
++ Mô tả ngắn
++ Mô tả chi tiết
++ Danh sách các job 
+🛎️Chữa project mini 5

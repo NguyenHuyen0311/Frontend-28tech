@@ -1,0 +1,171 @@
+28tech—Hướng dẫn viết CV và phỏng vấn
+🛎️Hướng dẫn viết CV 
+- CV có thể hiểu là một bản tóm tắt thông tin về ứng viên khi ứng tuyển một công ty 
+- Những lưu ý khi thiết kế CV 
++ CV cần viết ngắn gọn, mẫu giao diện đơn giản
++ Đọc kỹ bản mô tả công việc (JD - Job Description) của công ty để dựa vào đó viết CV cho phù hợp
+- CV cần có một số thông tin cơ bản sau:
++ Họ và tên, ảnh đại diện
++ Vị trí tuyển dụng: Intern Frontend, Fresher Frontend, Frontend Developer
++ Năm sinh, địa chỉ, email, số điện thoại, giới tính
++ Trình độ học vấn: Tên trường, chuyên ngành, mốc thời gian
++ Kinh nghiệm làm việc (nếu có)
+    . Tên công ty 
+    . Vị trí
+    . Mô tả ngắn công việc tại công ty 
+    . Mốc thời gian làm việc 
++ Liệt kê các kỹ năng lập trình 
++ Liệt kê một vài kỹ năng mềm (nếu có): kỹ năng làm việc nhóm, kỹ năng tư duy phản biện hay là kỹ năng quản lý thời gian 
++ Giải thưởng (nếu có)
++ Liệt kê một số project đã làm và mô tả ngắn gọn cho từng project
+- Lên trang https://www.topcv.vn/ để tạo CV nhanh và có nhiều mẫu sẵn
+- Link demo: https://www.topcv.vn/xem-cv/UIBVBA5VCQEJBw9cUIQGUgcFWwxeVwQCAA4KBAbc36
+🛎️Một số câu hỏi phỏng vấn thường gặp
+- Câu hỏi chung về bản thân và cách ứng xử
++ Câu hỏi: Anh/Chị hãy giới thiệu đôi chút về bản thân mình
++ Cách trả lời: Dành ra khoảng 2 phút để giới thiệu các thông tin cơ bản về bản thân như họ tên, tên trường đại học, khoa theo học; với những ứng viên đã đi làm rồi, bạn có thể giới thiệu thêm về công việc hiện tại; 
+với những ứng viên mới ra trường, bạn có thể trình bày sơ lược về nguyện vọng và đường hướng phát triển trong tương lai
+
++ Câu hỏi: Tại sao bạn muốn ứng tuyển vào vị trí lập trình viên?
++ Cách trả lời: Mục tiêu của nhà tuyển dụng khi đặt câu hỏi này là để đánh giá đam mê và nhiệt huyết của bạn, vậy nên bạn cũng cần chuẩn bị trước câu trả lời cho phần này. Khi được hỏi, bạn hãy thể hiện sự hào hứng và quan tâm của bạn đối với lập trình, code, CNTT cũng như các xu hướng mới. Về cơ bản, bạn có thể trình bày ngắn gọn và rõ ràng mục tiêu bạn viết trong CV
+
++ Câu hỏi: Điểm mạnh của bạn là gì?
++ Cách trả lời: Đây cũng là một trong những câu hỏi được hỏi khá thường xuyên bất kể bạn ứng tuyển vào vị trí nào. Đừng ngần ngại nói về những ưu điểm của bạn thân và nêu ra bạn sẽ giúp ích được gì cho công ty với những điểm mạnh đó
+
++ Câu hỏi: Điểm yếu của bạn là gì?
++ Cách trả lời: Hãy luôn trung thực và nói ra những vấn đề mà bạn đang gặp phải, bất kể chuyên môn hay kỹ năng. Tuy nhiên, bạn hãy thể hiện với nhà tuyển dụng thái độ luôn sẵn sàng học hỏi nhiều hơn và cải thiện những thiếu sót của mình
+
++ Câu hỏi: Bạn có bằng cấp nào về kỹ thuật chưa?
++ Cách trả lời: Nếu bạn đã đề cập vấn đề này trong CV nhưng vẫn được hỏi lại, bạn cũng hãy giữ thái độ chuyên nghiệp và trả lời chính xác những bằng cấp mà bạn đã tích lũy. Trong trường hợp chưa có, bạn cũng hãy thành thật và đưa ra cam kết mình sẽ bổ sung trong thời gian tới
+
++ Câu hỏi: Kiến thức hiện tại của bạn giúp được gì trong công việc này?
++ Cách trả lời: Hãy thành thật chia sẻ những kiến thức bạn đã tích lũy cả về chuyên môn lần kỹ năng, đồng thời đề ra khả năng của bản thân, bạn không nên cố gắng thể hiện những điều mình không có vì nhà tuyển dụng sẽ luôn có thể nhìn ra câu trả lời của bạn là thật hay giả 
+
++ Câu hỏi: Bạn làm gì để duy trì giá trị bằng cấp của bạn? 
++ Cách trả lời: Với câu hỏi này, bạn hãy thể hiện một thái độ đam mê và nhiệt huyết với công việc, bạn hãy trả lời rằng bằng cấp bạn có được sẽ không mất giá trị vì bạn vẫn luôn thực hiện những dự án, luôn không ngừng tự học và làm việc cùng những người trong ngành để nâng cao trình độ chuyên môn,...
+
++ Câu hỏi: Những yếu tố quan trọng nào làm nên thành công của một team?
++ Cách trả lời: Đây là một câu hỏi đánh giá khả năng làm việc nhóm của bạn. Vậy nên, bạn hãy liệt kê một loạt các yếu tố giúp cả nhóm đoàn kết hơn như việc lắng nghe, cùng nhau thảo luận, tình thần hợp tác, dĩ hòa vi quý,...
+
++ Câu hỏi: Hãy cho một ví dụ thực tế trường hợp bạn đã áp dụng kiến thức về lập trình của bạn 
++ Cách trả lời: Show các link project đã làm ra cho nhà tuyển dụng truy cập vào xem thử project của bạn (nên tự code thêm một vài mẫu website trên trang https://themeforest.net/ để có sự khác biệt)
+
++ Câu hỏi: Bạn có thể làm thêm giờ (OT) không?
++ Cách trả lời: Đây gần như là câu hỏi quan thuộc với dân IT và lập trình viên vì sẽ có nhiều dự án bạn buộc phải đảm bảo tiến độ để hoàn thành deadline. Vậy nên, hãy đưa ra câu trả lời là Có để thể hiện tinh thần làm việc của mình
+
++ Câu hỏi: Bạn có chịu được áp lực không?
++ Cách trả lời: Hãy luôn đảm bảo câu trả lời là có, không chỉ riêng gì các công việc thuộc lĩnh vực CNTT, mỗi ngành nghề đều có yêu cầu và áp lực riêng, bạn sẽ không thể tồn tại nếu như khả năng chịu áp lực không tốt. 
+Hơn nữa, với vị trí là lập trình viên, yêu cầu về công việc chắc chắn sẽ cao và nặng nề hơn nhiều
+
++ Câu hỏi: Trong lúc làm việc nhóm, bạn thường là người lắng nghe, người nói, người tranh luận hay người tổng hợp
++ Cách trả lời: Đây là một câu hỏi có thể đánh giá phần nào về con người của bạn, làm việc chung khi đi họp bàn dự án là một trong những phần rất quan trọng trong quá trình đi làm, vì vậy hãy thể hiện tinh thần làm việc thiện chí và hợp tác. 
+Bạn có thể trả lời nhiều hơn một vai trò và hay luôn đảm bảo mình có thể thực hiện tốt những việc phù hợp với mình 
+
+- Câu hỏi kiến thức lập trình chung 
++ Câu hỏi: Bạn đã đọc những gì từ các trang Web hay Blog về ngành?
++ Cách trả lời: Đây là câu hỏi được đặt ra để nhà tuyển dụng xem xét mức độ đam mê và nhiệt huyết trong công việc của bạn, đồng thời đánh giá độ nhạy của bạn đối với các công nghệ tiên tiến.
+Vì vậy, hãy nêu thẳng thắn những Blog hay Website mà bạn truy cập thường xuyên để ghi điểm với nhà tuyển dụng nhé!
+
++ Câu hỏi: Làm thế nào để đảm bảo chất lượng source code? 
++ Cách trả lời: Bạn hãy đề cập các tiêu chí sau đây trong câu trả lời của mình: kiểm thử đơn vị unit test đầy đủ; tránh các mã xấu khi viết code trùng lặp, lỗi trong câu điều kiện, câu so sánh; source code có đang chạy đúng với requirement không; code có được viết đúng style convention (đặt đúng quy ước như camelCase) không...
+
++ Câu hỏi: Kể tên công cụ quản lý source code mà bạn thường sử dụng nhất
++ Cách trả lời: Công cụ quản lý source code như GIT, nêu lý thuyết GIT là gì
+
+- Câu hỏi về HTML
++ Câu hỏi: Thẻ <!DOCTYPE html> là gì?
++ Cách trả lời: DOCTYPE dịch ra là kiểu tài liệu, tức là để khai báo đây là kiểu tài liệu gì. Cụ thể điền html có nghĩa là đây là tài liệu viết bằng HTML 
+
++ Câu hỏi: DOM trong HTML là gì?
++ Cách trả lời: 
+    . DOM đại diện cho website của bạn. Bên trong có root element là thẻ html, và bên trong root element có nhiều element khác là các thẻ như: head, body, div, a,...
+    . Và bên trong element sẽ có attribute và text
+
++ Câu hỏi: Nêu những điểm khác nhau giữa ID Selector và Class selector trong CSS?
++ Cách trả lời: 
+    . ID là duy nhất, mỗi phần tử chỉ có thể có một ID. Mỗi trang HTML chỉ có thể có một phần tử có ID đó 
+    . Ngược lại, Class bạn có thể sử dụng trên nhiều phần tử và một phần tử có thể có nhiều class 
+
++ Câu hỏi: Thuộc tính for của thẻ <label> dùng để làm gì?
++ Cách trả lời: Thuộc tính for của thẻ <label> phải bằng thuộc tính id của phần tử <input> để liên kết chúng lại với nhau. Khi đó, click vào <label> thì con trỏ sẽ tự động focus vào ô input đó 
+(Mở rộng ra có thể áp dụng cho một số kiểu element khác, không chỉ áp dụng cho input)
+
+- Câu hỏi về CSS
++ Câu hỏi: Có mấy cách chèn CSS 
++ Cách trả lời: Có 3 cách để chèn CSS 
+    . Inline: Ta sẽ thêm thuộc tính style vào trong thẻ mà muốn sử CSS. Có thể được sử dụng để áp dụng một kiểu duy nhất cho một element 
+    . Internal: Ta sẽ thêm thẻ <style></style> vào bất cứ đâu trong filel html, sau đó viết CSS vào trong thẻ <style> đó. Có thể được sử dụng nếu có một trang HTML duy nhất
+    . External: Ta thêm 1 file css ở bên ngoài, sau đó dùng thẻ <link /> đặt ở trong thẻ <head></head> và chèn đường dẫn vào thuộc tính href ở trong thẻ link. 
+    Có thể thay đổi giao diện của toàn bộ trang web bằng cách chỉ thay đổi một tệp
+
+
++ Câu hỏi: Phân biệt các kiểu hiển thị: inline, block, inline-block 
++ Cách trả lời:
+    . display: inline; (không đặt được chiều rộng và chiều cao, không thêm được margin và padding cho bên trên và bên dưới)
+    . display: block; (Chiều rộng kéo dài từ trái sang phải, luôn bắt đầu ở một hàng mới. Cho phép đặt chiều rộng và chiều cao, cho phép đặt margin và padding cho bên trên và bên dưới)
+    . display: block; (Chiều rộng mặc định bằng chiều rộng của element, không bắt đầu ở một hàng mới. Cho phép đặt chiều rộng và chiều cao, cho phép đặt margin và padding cho bên trên và bên dưới)
+
++ Câu hỏi: Kể tên một số cú pháp trong SCSS mà em biết
++ Cách trả lời:
+    . @extend: được dùng trong trường hợp muốn một selector sử dụng lại những thuộc tính của selector khác
+    . Nesting: là cấu trúc viết gọn theo dạng phân cấp, giúp dễ dàng kiểm soát phần tử con thuộc phần tử cha nào
+    . @mixin: Tương tự @extend nhưng @mixin có thể truyền đối số vào được
+    . @include: Dùng để gọi @mixin
+
+- Câu hỏi về GIT và GITHUB
++ Câu hỏi: Kể tên một số lệnh git hay sử dụng?
++ Cách trả lời: 
+    . git init: Khởi tạo 1 git repository(kho lưu trữ) trong thư mục gốc của dự án
+    . git status: Để xem trạng thái của những file đã được thay đổi (bao gồm: thêm, sửa, xóa) trong dự án
+    . git add ten_file hoặc git add .: Thông tin của các file sẽ được lưu vào Staging area. Staging area có tác dụng sắp xếp lại những file đã add vào
+    . git commit -m"Nội dung...": Để đưa những file ở vùng Staging area chuyển sang Repository, mục đích là tạo ra 1 phiên bản mới và lưu vào lịch sử của Repository. Với điều kiện các tập tin, thư mục được thay đổi đã phải nằm trong Staging Area 
+    . git push: Đẩy code lên GITHUB hoặc GITLAB
+    . git pull: Kéo code từ GITHUB hoặc GITLAB về máy
+    . git branch: Xem danh sách các nhánh
+    . git checkout -b ten_nhanh: Tạo một nhánh mới và chuyển sang nhánh đó
+    . git checkout ten_nhanh: Chuyển sang nhánh khác
+
+- Câu hỏi về Javascript
++ Câu hỏi: Có mấy cách sử dụng Javascript trong html?
++ Cách trả lời: Có 3 cách 
+    . Inline: viết trực tiếp trong thẻ HTML 
+    . Internal: viết trong file HTML hiện tại 
+    . External: viết ra một file js khác rồi nhúng vào trang HTML 
+
++ Câu hỏi: Cookies, Session Storage, Local Storage khác nhau như thế nào?
++ Cách trả lời:
+    . Cookies có thể thêm được thời gian hết hạn cho cặp name/value, lưu trữ được 4KB
+    . Local Storage sẽ lưu cặp name/value vô hạn, đến khi người dùng xóa lịch sử trình duyệt, lưu trữ được 5MB
+    . Session Storage sẽ lưu cặp name/value theo phiên, nghĩa là khi người dùng tắt trình duyệt thì cặp name/value cũng mất, lưu trữ được 10MB
+
++ Câu hỏi: Phương thức Fetch là gì?
++ Cách trả lời: Phương thức Fetch dùng để gọi lên trên server thông qua một API để lấy dữ liệu từ trên server trả về
+
++ Câu hỏi: API là gì?
++ Cách trả lời: Api là một url để cho phép bên Front-end có thể giao tiếp được với bên Back-end 
+
++ Câu hỏi: Spread syntax là gì?
++ Cách trả lời: 
+    . Spread syntax (Cú pháp trải ra) là một phép lặp lại các phần tử của mảng(array) hoặc đối tượng(object)
+    . Được thể hiện dưới dạng dấu ba chấm...
+
+- Câu hỏi về ReactJS
++ Câu hỏi: Multi Page Application và Single Page Application là gì?
++ Cách trả lời: 
+    . MPA là kiểu website hoạt động theo cách truyền thống, khi người dùng yêu cầu một trang web, thì server sẽ tính toán và trả về trang web đó cho người dùng toàn bộ trang web dưới dạng mã html và web đó sẽ được load lại mới hoàn toàn
+    . SPA là một trang web mà ở đó người dùng có thể truy cập nhiều trang con mà không ảnh hưởng gì đến trang gốc. Khi người dùng truy cập vào thành phần bất kỳ trên trang, SPA sẽ chỉ chạy nội dung trên thành phần đó mà không tải lại toàn bộ trang như web truyền thống  
+
++ Câu hỏi: React Router là gì? Một số component hay dùng 
++ Cách trả lời: 
+    . React Router là một thư viện được viết bằng React để quản lý routing trong các ứng dụng web
+    . Một số component hay dùng:
+        . BrowserRouter: Để kết nối ứng dụng của bạn với URL của trình duyệt thì phait import BrowserRouter và bọc nó bên ngoài toàn bộ ứng dụng chính là component App 
+        . Routes: Cung cấp các tuyến đường (routes) để điều hướng các thành phần của ứng dụng React. Dùng để bọc ở bên ngoài danh sách các Route
+        . Route: Được sử dụng để định nghĩa một route để điều hướng đến một component cụ thể
+        . Link: Cho phép chuyển đổi giữa các URL khác nhau mà không cần phải load lại trang (nó tương tự như thẻ <a> trong HTML)
+        . Outlet: Nó dùng để xác định vị trí mà component trong route được hiển thị (Sử dụng giống {props.childreb} trong React)
+        . NavLink: Cũng giống Link, nhưng nếu URL trùng với link của NavLink thì sẽ thêm class là active
+        . Navigate: Sử dụng Navigate để tự động chuyển hướng đến một trang nào đó
+
++ Câu hỏi: 
++ Cách trả lời:
